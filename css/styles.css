@@ -1449,8 +1449,8 @@ body {
 }
 
 .boosters-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   gap: var(--space-sm);
   padding: 0 var(--space-lg) var(--space-lg);
 }
@@ -1490,8 +1490,8 @@ body {
 }
 
 .booster-img {
-  width: 90px;
-  height: 90px;
+  width: 130px;
+  height: 110px;
   object-fit: cover;
   object-position: left center;
   flex-shrink: 0;
