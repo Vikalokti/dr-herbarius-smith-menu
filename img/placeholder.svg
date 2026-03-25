@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="280" viewBox="0 0 200 280">
+  <defs>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8e8e0" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#d4d4c8" stop-opacity="0.8"/>
+    </linearGradient>
+    <linearGradient id="liquid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="var(--drink-color, #F5A623)" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="var(--drink-color, #F5A623)" stop-opacity="0.9"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="280" rx="16" fill="#f5f5ed"/>
+  <!-- Glass shape -->
+  <path d="M55 60 Q50 60 52 80 L58 230 Q60 245 75 248 L125 248 Q140 245 142 230 L148 80 Q150 60 145 60 Z" fill="url(#glass)" stroke="#ccc" stroke-width="1"/>
+  <!-- Liquid -->
+  <path d="M60 120 Q58 120 60 130 L64 228 Q66 240 76 242 L124 242 Q134 240 136 228 L140 130 Q142 120 140 120 Z" fill="#F5A623" opacity="0.5"/>
+  <!-- Leaf decoration -->
+  <ellipse cx="130" cy="55" rx="18" ry="8" fill="#8BC34A" opacity="0.7" transform="rotate(-30, 130, 55)"/>
+  <line x1="130" y1="55" x2="145" y2="42" stroke="#689F38" stroke-width="1.5"/>
+</svg>
