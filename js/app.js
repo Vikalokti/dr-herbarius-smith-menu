@@ -16,6 +16,7 @@ const App = {
   },
 
   handleHash() {
+    window.scrollTo(0, 0);
     const hash = location.hash.slice(1) || 'home';
     const parts = hash.split('/');
 
