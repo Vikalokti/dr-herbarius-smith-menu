@@ -435,6 +435,13 @@ body {
   font-size: 22px;
   font-weight: 700;
   line-height: 1.2;
+  margin-bottom: 2px;
+}
+
+.category-header-en {
+  font-size: 15px;
+  font-weight: 400;
+  opacity: 0.6;
   margin-bottom: var(--space-sm);
 }
 
@@ -1470,9 +1477,60 @@ body {
   padding-right: 0;
 }
 
+/* Mono Herbs */
+.mono-herbs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mono-herb-card {
+  background: #fff;
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+}
+
+.mono-herb-header {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.mono-herb-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.mono-herb-part {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.mono-herb-weight {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-left: auto;
+}
+
+.mono-herb-source {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: 4px;
+  line-height: 1.4;
+}
+
+.mono-herb-effect {
+  font-size: 13px;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
 .booster-card {
   border-radius: var(--radius-md);
-  padding: var(--space-sm) 0 var(--space-sm) var(--space-md);
+  padding: var(--space-md) 0 var(--space-md) var(--space-lg);
   display: flex;
   flex-direction: row;
   align-items: stretch;
@@ -1499,7 +1557,7 @@ body {
 }
 
 .booster-name {
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 700;
   line-height: 1.2;
 }
@@ -1512,10 +1570,10 @@ body {
 }
 
 .booster-function {
-  font-size: 11px;
-  font-style: italic;
-  opacity: 0.7;
-  margin-top: 3px;
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 0.75;
+  margin-top: 8px;
   line-height: 1.3;
 }
 

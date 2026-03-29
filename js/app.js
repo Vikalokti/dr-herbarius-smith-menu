@@ -99,6 +99,27 @@ const App = {
     'lemon-vita': '\u{1F34B}',
     'silent-warming': '\u{1F33A}',
     'serotonin-sun': '\u2600\uFE0F',
+    'neuro-clear': '\u{1F9E0}',
+    'mental-clear': '\u{1F4A1}',
+    'neuro-potok': '\u26A1',
+    'energo-ritm': '\u{1F525}',
+    'yasny-fokus': '\u{1F3AF}',
+    'pure-green': '\u{1F96C}',
+    'inner-flow': '\u{1F343}',
+    'cell-flow': '\u{1F33F}',
+    'rose-elastic-glow': '\u{1F339}',
+    'berry-shield': '\u{1F347}',
+    'keratin-balance': '\u{1F485}',
+    'fiber-comfort': '\u{1F33E}',
+    'metabo-control': '\u{1F4AA}',
+    'clear-fiber': '\u{1F343}',
+    'biobalance': '\u{1F9EC}',
+    'immunoferm': '\u{1F6E1}\uFE0F',
+    'ph-balance': '\u2696\uFE0F',
+    'detox-metabolism': '\u{1F331}',
+    'cardio-balance': '\u2764\uFE0F',
+    'calm-balance': '\u{1F54A}\uFE0F',
+    'tibetan-rejuvenation': '\u{1F3D4}\uFE0F',
     'oxygen-recovery': '\u{1F4A8}',
     'pre-work': '\u{1F3CB}\uFE0F',
     'recovery': '\u{1F9CA}',
@@ -168,24 +189,24 @@ const App = {
     const main = document.getElementById('main-content');
     const categoriesHTML = CATEGORIES.filter(cat => cat.id !== 'boosters').map(cat => {
       const count = DRINKS.filter(d => d.category === cat.id).length;
-      if (cat.id === 'boosters') {
+      if (cat.id === 'mono') {
         return `
-          <a href="#category/${cat.id}" class="category-card" style="background: ${cat.color}; color: white;">
+          <a href="#category/${cat.id}" class="category-card" style="background: ${cat.colorLight}; color: ${cat.color};">
             <div class="category-card-content">
-              <div class="category-card-subtitle">${cat.nameRu}</div>
-              <div class="category-card-name">${cat.nameEn}</div>
-              <div class="category-card-desc">${cat.description}</div>
-              <div class="category-card-count">${BOOSTERS.length} добавок</div>
+              <div class="category-card-subtitle" style="color: ${cat.color}99">${cat.nameEn}</div>
+              <div class="category-card-name" style="color: ${cat.color}">${cat.nameRu}</div>
+              <div class="category-card-desc" style="color: ${cat.color}cc">${cat.description}</div>
+              <div class="category-card-count" style="color: ${cat.color}99">${MONO_HERBS.length} ингредиентов</div>
             </div>
-            <div class="category-card-arrow">${this.icons.arrow}</div>
+            <div class="category-card-arrow" style="color: ${cat.color}">${this.icons.arrow}</div>
           </a>
         `;
       }
       return `
         <a href="#category/${cat.id}" class="category-card" style="background: ${cat.colorLight}; color: ${cat.color};">
           <div class="category-card-content">
-            <div class="category-card-subtitle" style="color: ${cat.color}99">${cat.nameRu}</div>
-            <div class="category-card-name" style="color: ${cat.color}">${cat.nameEn}</div>
+            <div class="category-card-subtitle" style="color: ${cat.color}99">${cat.nameEn}</div>
+            <div class="category-card-name" style="color: ${cat.color}">${cat.nameRu}</div>
             <div class="category-card-desc" style="color: ${cat.color}cc">${cat.description}</div>
             <div class="category-card-count" style="color: ${cat.color}99">${count} ${this.pluralizeRu(count, 'напиток', 'напитка', 'напитков')}</div>
           </div>
@@ -301,11 +322,77 @@ const App = {
 
     const main = document.getElementById('main-content');
 
+    if (catId === 'mono') {
+      this.renderHeader('back', 'Моно растения');
+      main.innerHTML = `
+        <div class="page-enter" style="background: ${cat.colorLight};">
+          <div class="category-header" style="color: ${cat.color};">
+            <div class="category-header-en">${cat.nameEn}</div>
+            <h2 class="category-header-title">${cat.nameRu}</h2>
+            <p class="category-header-desc">${cat.description}</p>
+          </div>
+
+          <div style="padding: 0 var(--space-lg);">
+            <div style="margin-top: var(--space-md); background: #82916A; border-radius: var(--radius-md); padding: var(--space-md);">
+              <div style="font-size: 13px; font-weight: 600; color: #fff; margin-bottom: 8px;">СОБЕРИ СВОЙ НАСТОЙ</div>
+              <div style="font-size: 13px; color: #ffffffcc; line-height: 1.5;">Объём: 380 мл · Заваривание: 5 минут</div>
+              <div style="font-size: 13px; color: #ffffffcc; line-height: 1.5; margin-top: 8px;">1 компонент — точечное действие</div>
+              <div style="font-size: 13px; color: #ffffffcc; line-height: 1.5; margin-top: 4px;">2–3 компонента — баланс вкуса и эффекта</div>
+              <div style="font-size: 13px; color: #ffffffcc; line-height: 1.5; margin-top: 4px;">4 компонента — сложный профиль</div>
+              <div style="font-size: 13px; color: #ffffffcc; line-height: 1.5; margin-top: 8px;">База + дополнение + акцент — оптимальная формула</div>
+            </div>
+
+            <div style="margin-top: var(--space-lg); margin-bottom: var(--space-sm);">
+              <div style="font-size: 16px; font-weight: 700; color: var(--text-primary);">Ингредиенты</div>
+              <div style="font-size: 13px; color: var(--text-secondary); margin-top: 2px;">24 моно растения</div>
+            </div>
+
+            <div class="mono-herbs-list">
+              ${MONO_HERBS.map(h => `
+                <div class="mono-herb-card">
+                  <div class="mono-herb-header">
+                    <span class="mono-herb-name">${h.name}</span>
+                    ${h.part ? `<span class="mono-herb-part">${h.part}</span>` : ''}
+                    ${h.weight ? `<span class="mono-herb-weight">${h.weight}</span>` : ''}
+                  </div>
+                  <div class="mono-herb-source">${h.source}</div>
+                  <div class="mono-herb-effect" style="color: ${cat.color};">${h.effect}</div>
+                </div>
+              `).join('')}
+            </div>
+
+            <div style="margin-top: var(--space-xl);">
+              <div style="font-size: 16px; font-weight: 700; color: var(--text-primary); margin-bottom: var(--space-md);">Выбор по состоянию</div>
+              ${MONO_BY_STATE.map(s => `
+                <div style="margin-bottom: var(--space-sm); padding: var(--space-sm) var(--space-md); background: #fff; border-radius: var(--radius-md);">
+                  <div style="font-size: 14px; font-weight: 600; color: ${cat.color}; margin-bottom: 4px;">${s.state}</div>
+                  <div style="font-size: 13px; color: var(--text-secondary); line-height: 1.5;">${s.herbs}</div>
+                </div>
+              `).join('')}
+            </div>
+
+            <div style="margin-top: var(--space-lg); padding: var(--space-md); background: #FFE381; border-radius: var(--radius-md); margin-bottom: var(--space-lg);">
+              <div style="font-size: 14px; font-weight: 600; color: #5C4A1E; margin-bottom: 6px;">Можно добавить</div>
+              <div style="font-size: 13px; color: #5C4A1Ecc; line-height: 1.6;">горный мёд · сироп топинамбура · сок лимона</div>
+            </div>
+
+            <div style="padding: var(--space-md); background: var(--bg-card); border-radius: var(--radius-md); margin-bottom: var(--space-md); border: 1px solid var(--border);">
+              <div style="font-size: 13px; color: var(--text-secondary); line-height: 1.6; font-style: italic;">Сильные компоненты (саган-дайля, лимонник, имбирь) лучше использовать как акцент. Если сомневаетесь — бариста поможет собрать идеальный состав под ваш запрос.</div>
+            </div>
+
+            <div style="text-align: center; padding: var(--space-lg) 0 var(--space-xl); font-size: 28px; font-weight: 800; color: ${cat.color};">390 ₽</div>
+          </div>
+        </div>
+      `;
+      return;
+    }
+
     if (catId === 'boosters') {
       main.innerHTML = `
         <div class="page-enter">
           <div class="category-hero" style="background: ${cat.colorLight}; color: ${cat.color};">
-            <h2>${cat.nameRu} / ${cat.nameEn}</h2>
+            <div class="category-header-en">${cat.nameEn}</div>
+            <h2>${cat.nameRu}</h2>
             <p>${cat.description}</p>
             <p style="margin-top: 4px; font-size: 13px; opacity: 0.8;">${cat.descriptionEn}</p>
           </div>
@@ -313,9 +400,8 @@ const App = {
             <div class="boosters-grid">
               ${BOOSTERS.map(b => `
                 <div class="booster-card">
-                  <div class="booster-name">${b.name}</div>
-                  <div class="booster-function" style="color:${b.color || '#265B2D'};">${b.function}</div>
-                  <div class="booster-ingredients">${b.activeIngredients}</div>
+                  <div class="booster-name">${b.activeIngredients.charAt(0).toUpperCase() + b.activeIngredients.slice(1)}</div>
+                  <div class="booster-function" style="color:${b.color || '#265B2D'};">Функция: ${b.function}</div>
                   <div class="booster-price">${b.price} P</div>
                 </div>
               `).join('')}
@@ -331,7 +417,8 @@ const App = {
     main.innerHTML = `
       <div class="page-enter category-page" style="background: ${cat.colorLight};">
         <div class="category-header" style="color: ${cat.color};">
-          <h2 class="category-header-title">${cat.nameRu} / ${cat.nameEn}</h2>
+          <div class="category-header-en">${cat.nameEn}</div>
+          <h2 class="category-header-title">${cat.nameRu}</h2>
           <p class="category-header-desc">${cat.description}</p>
         </div>
         <div class="drinks-list">
@@ -358,8 +445,8 @@ const App = {
         ${drink.image ? `<div class="drink-card-image"><img src="${drink.image}" alt="${drink.nameEn}"></div>` : ''}
         <div class="drink-card-info">
           <div>
-            <div class="drink-card-name">${drink.nameEn}</div>
-            <div class="drink-card-name-ru">${drink.nameRu}</div>
+            <div class="drink-card-name">${drink.nameRu}</div>
+            <div class="drink-card-name-ru">${drink.nameEn}</div>
             <div class="drink-card-function">${drink.functionRu}</div>
           </div>
           <div class="drink-card-temps">${temps}</div>
@@ -380,9 +467,8 @@ const App = {
           ${BOOSTERS.map(b => `
             <div class="booster-card" style="background:${b.bg || '#F5F0E8'};">
               <div class="booster-card-text">
-                <div class="booster-name" style="color:${b.color || '#265B2D'};">${b.name}</div>
-                <div class="booster-name-ru" style="color:${b.color || '#265B2D'};">${b.activeIngredients}</div>
-                <div class="booster-function" style="color:${b.color || '#265B2D'};">${b.function}</div>
+                <div class="booster-name" style="color:${b.color || '#265B2D'};">${b.activeIngredients.charAt(0).toUpperCase() + b.activeIngredients.slice(1)}</div>
+                <div class="booster-function" style="color:${b.color || '#265B2D'};">Функция: ${b.function}</div>
                 <div class="booster-price" style="color:${b.color || '#265B2D'};">${b.price} ₽</div>
               </div>
               ${b.image ? `<img src="${b.image}" alt="${b.name}" class="booster-img">` : ''}
@@ -403,7 +489,7 @@ const App = {
     if (!drink) { location.hash = '#home'; return; }
 
     const cat = CATEGORIES.find(c => c.id === drink.category);
-    this.renderHeader('back', drink.nameEn);
+    this.renderHeader('back', drink.nameRu);
     this.renderNav('home');
 
     const main = document.getElementById('main-content');
@@ -426,8 +512,8 @@ const App = {
           <div class="drink-info-card-meta">
             <span class="drink-hero-cat-tag" style="background:${cat.colorLight};color:${cat.color};">${cat.nameRu}</span>
           </div>
-          <h1 class="drink-info-card-name">${drink.nameEn}</h1>
-          <div class="drink-info-card-name-ru">${drink.nameRu}</div>
+          <h1 class="drink-info-card-name">${drink.nameRu}</h1>
+          <div class="drink-info-card-name-ru">${drink.nameEn}</div>
           <p class="drink-info-card-desc">${drink.description ? drink.description.split('\n')[0] : (drink.functionRu || drink.functionShort)}</p>
         </div>
       </div>
@@ -474,7 +560,7 @@ const App = {
               ${drink.fruitBase.map(f => `
                 <div class="fruit-item">
                   <div class="fruit-info"><div class="fruit-name">${f.name}</div>${f.effect ? `<div class="fruit-effect">${f.effect}</div>` : ''}</div>
-                  <div class="fruit-amount">${f.amount}</div>
+                  ${f.amount ? `<div class="fruit-amount">${f.amount}</div>` : ''}
                 </div>
               `).join('')}
             </div>
@@ -492,7 +578,7 @@ const App = {
             <div class="nutra-grid">
               ${drink.nutraceuticals.map(n => `
                 <div class="nutra-item">
-                  <div class="nutra-amount" style="background: ${cat.colorLight}; color: ${cat.color};">${n.amount}</div>
+                  ${n.amount ? `<div class="nutra-amount" style="background: ${cat.colorLight}; color: ${cat.color};">${n.amount}</div>` : ''}
                   <div class="nutra-name">${n.name}</div>
                   <div class="nutra-effect">${n.effect}</div>
                 </div>
