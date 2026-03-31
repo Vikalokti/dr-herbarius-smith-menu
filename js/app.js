@@ -231,6 +231,33 @@ const App = {
         <div class="categories-grid">
           ${categoriesHTML}
         </div>
+
+        <div class="find-us-section">
+          <h2 class="find-us-title">Как нас найти</h2>
+          <div class="find-us-card">
+            <img src="img/Как нас найти.jpeg" alt="Dr. Herbarius — Роза Хутор" class="find-us-img">
+            <div class="find-us-info">
+              <div class="find-us-address">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="18" height="18"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <div>
+                  <div class="find-us-place">Роза Хутор</div>
+                  <div class="find-us-detail">Горная Олимпийская деревня м-н, Адлерский район, Сочи, Краснодарский край, 354392</div>
+                  <div class="find-us-detail">1 этаж</div>
+                </div>
+              </div>
+              <div class="find-us-maps">
+                <a href="https://2gis.ru/sochi/search/%D1%82%D1%80%D0%B0%D0%B2%D1%8B%20%D0%BA%D0%B0%D0%B2%D0%BA%D0%B0%D0%B7%D0%B0%20%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD/firm/70000001110993968?m=40.320548%2C43.658553%2F20%2Fp%2F45" target="_blank" class="find-us-map-btn">2ГИС</a>
+                <a href="https://yandex.ru/maps/239/sochi/?ll=40.320176%2C43.658487&mode=whatshere&whatshere%5Bpoint%5D=40.320247%2C43.658607&whatshere%5Bzoom%5D=17&z=20" target="_blank" class="find-us-map-btn">Яндекс Карты</a>
+              </div>
+              <div class="find-us-socials">
+                <a href="https://t.me/DrHerbarius" target="_blank" class="find-us-tg-btn">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M11.944 0A12 12 0 1 0 24 12.056A12.01 12.01 0 0 0 11.944 0Zm5.654 7.304l-1.97 9.28c-.146.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.334-.373-.121l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.832.942Z"/></svg>
+                  Telegram
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     `;
   },
