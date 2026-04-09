@@ -3,6 +3,8 @@
 // SPA-like navigation, rendering, search, favorites
 // ========================================
 
+const GUEST_MODE = window.location.hostname.startsWith('guest');
+
 const App = {
   currentPage: 'home',
   currentCategory: null,
@@ -478,7 +480,7 @@ const App = {
             <div class="drink-card-function">${drink.functionRu}</div>
           </div>
           <div class="drink-card-temps">${temps}</div>
-          <div class="drink-card-price">${drink.price} P</div>
+          ${GUEST_MODE ? '' : `<div class="drink-card-price">${drink.price} P</div>`}
         </div>
         <button class="fav-btn ${isFav ? 'active' : ''}" data-fav="${drink.id}" onclick="App.toggleFavorite('${drink.id}', event)">
           ${isFav ? this.icons.heartFilled : this.icons.heart}
@@ -497,7 +499,7 @@ const App = {
               <div class="booster-card-text">
                 <div class="booster-name" style="color:${b.color || '#265B2D'};">${b.activeIngredients.charAt(0).toUpperCase() + b.activeIngredients.slice(1)}</div>
                 <div class="booster-function" style="color:${b.color || '#265B2D'};">Функция: ${b.function}</div>
-                <div class="booster-price" style="color:${b.color || '#265B2D'};">${b.price} ₽</div>
+                ${GUEST_MODE ? '' : `<div class="booster-price" style="color:${b.color || '#265B2D'};">${b.price} ₽</div>`}
               </div>
               ${b.image ? `<img src="${b.image}" alt="${b.name}" class="booster-img">` : ''}
             </div>
@@ -755,7 +757,9 @@ const App = {
       });
       html += `</div>`;
     }
-    html += `<div class="drink-price-row"><div class="drink-price-value" style="color:${cat.color};">${drink.price} ₽</div></div>`;
+    if (!GUEST_MODE) {
+      html += `<div class="drink-price-row"><div class="drink-price-value" style="color:${cat.color};">${drink.price} ₽</div></div>`;
+    }
     html += `</div>`;
 
     // === BOOSTERS (only for vitamins category) ===
