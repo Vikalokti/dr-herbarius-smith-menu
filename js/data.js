@@ -313,7 +313,7 @@ const DRINKS = [
   },
   {
     id: "flush-vita",
-    image: "img/Fiber Flush Vita@2x.png",
+    image: "img/Root Power Vita@2x.png",
     nameEn: "Fiber Flush Vita",
     nameRu: "Файбер Флаш Вита",
     category: "vitamins",
@@ -330,7 +330,7 @@ const DRINKS = [
   },
   {
     id: "root-power-vita",
-    image: "img/Root Power Vita@2x.png",
+    image: "img/Fiber Flush Vita@2x.png",
     nameEn: "Root Power Vita",
     nameRu: "Корневая сила",
     category: "vitamins",
