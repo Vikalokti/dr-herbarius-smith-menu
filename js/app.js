@@ -442,6 +442,31 @@ const App = {
       return;
     }
 
+    if (catId === 'snacks') {
+      this.renderHeader('back', 'Перекусы');
+      main.innerHTML = `
+        <div class="page-enter" style="background: ${cat.colorLight};">
+          <div class="category-header" style="color: ${cat.color};">
+            <div class="category-header-en">${cat.nameEn}</div>
+            <h2 class="category-header-title">${cat.nameRu}</h2>
+            <p class="category-header-desc">${cat.description}</p>
+          </div>
+
+          <div style="padding: 0 var(--space-lg) var(--space-xl);">
+
+            <!-- Rich Base info -->
+            <div style="background: #FFE381; border-radius: var(--radius-md); padding: var(--space-md); margin-bottom: var(--space-lg);">
+              <div style="font-size: 17px; font-weight: 700; color: #5C4A1E; margin-bottom: 8px;">${SNACKS.richBase.name}</div>
+              <div style="font-size: 14px; color: #5C4A1E; line-height: 1.7;">${SNACKS.richBase.ingredients}</div>
+            </div>
+
+            ${SNACKS.sections.map(section => this.renderSnackSection(section, cat)).join('')}
+          </div>
+        </div>
+      `;
+      return;
+    }
+
     const drinks = DRINKS.filter(d => d.category === catId);
 
     main.innerHTML = `
@@ -502,6 +527,155 @@ const App = {
                 ${GUEST_MODE ? '' : `<div class="booster-price" style="color:${b.color || '#265B2D'};">${b.price} ₽</div>`}
               </div>
               ${b.image ? `<img src="${b.image}" alt="${b.name}" class="booster-img">` : ''}
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    `;
+  },
+
+  // ========================================
+  // SNACK SECTION RENDERER
+  // ========================================
+  renderSnackSection(section, cat) {
+    if (section.id === 'yogurt') {
+      const c = section.constructor;
+      return `
+        <div class="snack-section">
+          <div class="snack-section-header">
+            <div>
+              <div class="snack-section-en">${section.nameEn}</div>
+              <div class="snack-section-name">${section.name}</div>
+            </div>
+            ${GUEST_MODE ? '' : `<div class="snack-section-price">${section.price} ₽</div>`}
+          </div>
+          ${section.image ? `<img src="${section.image}" alt="${section.name}" class="snack-section-hero-img">` : ''}
+          <div class="snack-yogurt-steps">
+            <div class="snack-yogurt-step">
+              <div class="snack-yogurt-step-num" style="background:${cat.colorLight};color:${cat.color};">1</div>
+              <div class="snack-yogurt-step-content">
+                <div class="snack-yogurt-step-title">Йогурт основа</div>
+                <div class="snack-yogurt-options">${c.bases.map(b => `<span class="snack-tag">${b}</span>`).join('')}</div>
+              </div>
+            </div>
+            <div class="snack-yogurt-step">
+              <div class="snack-yogurt-step-num" style="background:${cat.colorLight};color:${cat.color};">2</div>
+              <div class="snack-yogurt-step-content">
+                <div class="snack-yogurt-step-title">Сухие добавки</div>
+                <div class="snack-yogurt-options snack-yogurt-img-options">
+                  ${c.dryAddons.map(a => `
+                    <div class="snack-yogurt-img-option">
+                      ${a.image ? `<img src="${a.image}" alt="${a.name}" class="snack-yogurt-addon-img snack-yogurt-addon-img--lg">` : ''}
+                      <span class="snack-yogurt-addon-name">${a.name}</span>
+                    </div>
+                  `).join('')}
+                </div>
+              </div>
+            </div>
+            <div class="snack-yogurt-step">
+              <div class="snack-yogurt-step-num" style="background:${cat.colorLight};color:${cat.color};">3</div>
+              <div class="snack-yogurt-step-content">
+                <div class="snack-yogurt-step-title">Сиропы</div>
+                <div class="snack-yogurt-options">${c.syrups.map(s => `<span class="snack-tag">${s}</span>`).join('')}</div>
+              </div>
+            </div>
+            <div class="snack-yogurt-step">
+              <div class="snack-yogurt-step-num" style="background:${cat.colorLight};color:${cat.color};">4</div>
+              <div class="snack-yogurt-step-content">
+                <div class="snack-yogurt-step-title">Пюре</div>
+                <div class="snack-yogurt-options snack-yogurt-img-options">
+                  ${c.purees.map(p => `
+                    <div class="snack-yogurt-img-option">
+                      ${p.image ? `<img src="${p.image}" alt="${p.name}" class="snack-yogurt-addon-img snack-yogurt-addon-img--lg">` : ''}
+                      <span class="snack-yogurt-addon-name">${p.name}</span>
+                    </div>
+                  `).join('')}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    if (section.id === 'pies' || section.id === 'veggies') {
+      return `
+        <div class="snack-section">
+          <div class="snack-section-header">
+            <div>
+              <div class="snack-section-en">${section.nameEn || ''}</div>
+              <div class="snack-section-name">${section.name}</div>
+            </div>
+            <span class="snack-coming-soon">Скоро</span>
+          </div>
+        </div>
+      `;
+    }
+
+    if (section.id === 'lyophilized') {
+      return `
+        <div class="snack-section">
+          <div class="snack-section-header">
+            <div>
+              <div class="snack-section-en">${section.nameEn}</div>
+              <div class="snack-section-name">${section.name}</div>
+            </div>
+            ${GUEST_MODE ? '' : `<div class="snack-section-price">${section.price} ₽</div>`}
+          </div>
+          <div class="snack-lyo-grid">
+            ${section.items.map(item => `
+              <div class="snack-lyo-item">
+                ${item.image ? `<img src="${item.image}" alt="${item.name}" class="snack-lyo-img">` : ''}
+                <div class="snack-lyo-name">${item.name}</div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      `;
+    }
+
+    if (section.id === 'batat' || section.id === 'pastila') {
+      const item = section.items[0];
+      const img = section.image || item.image;
+      return `
+        <div class="snack-section snack-section--single">
+          ${img ? `<img src="${img}" alt="${section.name}" class="snack-single-img">` : ''}
+          <div class="snack-section-single-info">
+            <div>
+              <div class="snack-section-en">${section.nameEn || ''}</div>
+              <div class="snack-section-name">${section.name}</div>
+              ${item.name && item.name !== section.name ? `<div class="snack-single-ingredients">${item.name}</div>` : ''}
+            </div>
+            ${GUEST_MODE ? '' : `<div class="snack-section-price">${section.price} ₽</div>`}
+          </div>
+        </div>
+      `;
+    }
+
+    const hasSectionPrice = !!section.price && section.items.every(i => !i.price);
+
+    return `
+      <div class="snack-section">
+        <div class="snack-section-header">
+          <div>
+            <div class="snack-section-en">${section.nameEn || ''}</div>
+            <div class="snack-section-name">${section.name}</div>
+          </div>
+          <div style="text-align:right;">
+            ${GUEST_MODE ? '' : hasSectionPrice ? `<div class="snack-section-price">${section.price} ₽</div>` : ''}
+            ${section.priceNote ? `<div class="snack-price-note">${section.priceNote}</div>` : ''}
+          </div>
+        </div>
+        <div class="snack-items">
+          ${section.items.map(item => `
+            <div class="snack-item">
+              ${item.image ? `<img src="${item.image}" alt="${item.name}" class="snack-item-img">` : ''}
+              <div class="snack-item-content">
+                <div class="snack-item-name">${item.name}</div>
+                ${item.nameEn ? `<div class="snack-item-en">${item.nameEn}</div>` : ''}
+                ${item.ingredients ? `<div class="snack-item-ingredients">${item.ingredients}</div>` : ''}
+              </div>
+              ${GUEST_MODE ? '' : item.price ? `<div class="snack-item-price">${item.price} ₽</div>` : ''}
             </div>
           `).join('')}
         </div>

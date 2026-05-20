@@ -166,6 +166,18 @@ const CATEGORIES = [
     colorLight: "#E8F0E6",
     colorMid: "#A5C4A0",
     icon: "plus"
+  },
+  {
+    id: "snacks",
+    nameEn: "Snacks & Food",
+    nameRu: "Перекусы",
+    subtitle: "Eat Well",
+    description: "Натуральные перекусы без добавленного сахара — конфеты, печенья, ассорти, пироги и горячие закуски",
+    descriptionEn: "Natural snacks with no added sugar — truffles, cookies, assorted cups, pies and hot bites",
+    color: "#4A6130",
+    colorLight: "#EFF4E8",
+    colorMid: "#8FAD6B",
+    icon: "leaf"
   }
 ];
 
@@ -226,6 +238,123 @@ const BOOSTERS = [
   { id: "collagen-glow", name: "Collagen Glow", nameRu: "Коллаген Глоу", function: "поддержка кожи", activeIngredients: "коллаген + витамины", price: 50, image: "img/бустеры/Collagen Glow.png", bg: "#F5F0E8", color: "#5C4A1E" },
   { id: "green-superfood", name: "Green Superfood", nameRu: "Грин Суперфуд", function: "поддержка детокс-процессов", activeIngredients: "экстракт зелёных ростков пшеницы, кейл, спирулина", price: 75, image: "img/бустеры/Green Superfood.png", bg: "#E8F5F0", color: "#1A5C48" }
 ];
+
+const SNACKS = {
+  richBase: {
+    name: "База-основа конфет и печенья",
+    nameEn: "Rich Base",
+    ingredients: "кешью, миндаль, фундук, грецкий орех, финик, изюм, курага, инжир, мёд, кокосовое масло, кэроб, соль"
+  },
+  sections: [
+    {
+      id: "candies",
+      name: "Конфеты",
+      nameEn: "Botanical Truffles",
+      price: 110,
+      priceNote: "",
+      items: [
+        { id: "anchan", name: "Анчан", nameEn: "Blue Anchan", ingredients: "База-основа, анчан порошок", image: "img/перекусы/image 164.png" },
+        { id: "raspberry", name: "Малина", nameEn: "Raspberry", ingredients: "База-основа, лиофилизированный порошок малины", image: "img/перекусы/image 165.png" },
+        { id: "carob-cacao", name: "Кероб, какао", nameEn: "Dark Carob Cacao", ingredients: "База-основа, кэроб, какао", image: "img/перекусы/image 166.png" },
+        { id: "green-matcha", name: "Зелёная матча", nameEn: "Green Matcha", ingredients: "База-основа, зелёная матча", image: "img/перекусы/image 167.png" },
+        { id: "pitahaya-matcha", name: "Матча питахайя", nameEn: "Pitahaya Matcha", ingredients: "База-основа, матча питахайя", image: "img/перекусы/image 168.png" }
+      ]
+    },
+    {
+      id: "cookies",
+      name: "Печенья",
+      nameEn: "Botanical Cookies",
+      price: 190,
+      items: [
+        { id: "chocolate-cookie", name: "Шоколад", nameEn: "Chocolate Cream", ingredients: "База-основа, овсяная мука, льняная мука, какао, кокосовое масло, соль", image: "img/перекусы/image 160.png" },
+        { id: "lemon-cranberry-cookie", name: "Клюква — лимон", nameEn: "Lemon Cranberry", ingredients: "База-основа, гречневая мука, овсяная мука, клюква, лимонная цедра, лимонный сок, кокосовое масло, соль", image: "img/перекусы/image 159.png" },
+        { id: "mango-coconut-cookie", name: "Манго — кокос", nameEn: "Coconut Mango", ingredients: "База-основа, кокосовая мука, амарантовая мука, манго порошок, кусочки манго, кокосовая стружка, кокосовое масло, соль", image: "img/перекусы/image 158.png" }
+      ]
+    },
+    {
+      id: "yogurt",
+      name: "Йогурт-конструктор",
+      nameEn: "Yogurt Constructor",
+      price: 390,
+      image: "img/перекусы/image 179.png",
+      constructor: {
+        bases: ["Классический", "Безлактозный"],
+        dryAddons: [
+          { name: "Микс орехов", image: "img/перекусы/image 160-1.png" },
+          { name: "Гранола ягодная", image: "img/перекусы/image 2.png" },
+          { name: "Гранола шоколадная", image: "img/перекусы/image 3.png" },
+          { name: "Овсяные хлопья", image: "img/перекусы/image 4.png" }
+        ],
+        syrups: ["Мёд", "Сироп агавы", "Сироп топинамбура", "Сироп ягодный или фруктовый"],
+        purees: [
+          { name: "Ягодное", image: "img/перекусы/image 160-2.png" },
+          { name: "Фруктовое", image: "img/перекусы/image 177.png" }
+        ]
+      }
+    },
+    {
+      id: "assorted-cups",
+      name: "Ассорти стаканы",
+      nameEn: "Assorted Cups",
+      items: [
+        { id: "nuts-raisins", name: "Орехи с изюмом и клюквой", price: 399, ingredients: "грецкий орех, миндаль, фундук, кешью, клюква вяленная, курага, изюм", image: "img/перекусы/image 156.png" },
+        { id: "chips-nuts", name: "Чипсы, орехи и сухофрукты", price: 499, ingredients: "апельсин, яблоко, грецкий орех, миндаль, фундук, кешью, клюква вяленная, курага, изюм", image: "img/перекусы/image 161.png" },
+        { id: "lukum-almonds", name: "Лукум, миндаль и финики", price: 490, ingredients: "лукум, миндаль, финики", image: "img/перекусы/image 162.png" }
+      ]
+    },
+    {
+      id: "pastila",
+      name: "Пастила",
+      nameEn: "Fruit Pastila",
+      price: 499,
+      image: "img/перекусы/image 163.png",
+      items: [
+        { id: "pastila-fruit", name: "Фруктово-ягодная", ingredients: "" }
+      ]
+    },
+    {
+      id: "lyophilized",
+      name: "Сублимированные ягоды",
+      nameEn: "Freeze-dried Berries",
+      price: 690,
+      items: [
+        { id: "strawberry-glazed", name: "Клубника в глазури", image: "img/перекусы/image 172.png" },
+        { id: "blueberry-hazelnut", name: "Творожики с голубикой и фундуком", image: "img/перекусы/image 173.png" },
+        { id: "passionfruit-yogurt", name: "Маракуйя в йогуртовой глазури", image: "img/перекусы/image 174.png" }
+      ]
+    },
+    {
+      id: "batat",
+      name: "Запечённый батат с пармезаном",
+      nameEn: "Sweet Potato Fries",
+      price: 490,
+      image: "img/перекусы/image 176.png",
+      items: [
+        { id: "batat-fries", name: "Батат запечённый с пармезаном", ingredients: "" }
+      ]
+    },
+    {
+      id: "pies",
+      name: "Пироги",
+      nameEn: "Botanical Pies",
+      priceNote: "Цена уточняется",
+      items: [
+        { id: "cranberry-lemon-pie", name: "Клюква — лимон", ingredients: "База-основа, гречневая мука, овсяная мука, клюква, лимон", image: "img/перекусы/Object.png" },
+        { id: "mango-coconut-pie", name: "Манго — кокос", ingredients: "База-основа, кокосовая мука, амарантовая мука, манго", image: "img/перекусы/Object-1.png" }
+      ]
+    },
+    {
+      id: "veggies",
+      name: "Овощные палочки",
+      nameEn: "Veggie Sticks",
+      price: 190,
+      image: "img/перекусы/image 175.png",
+      items: [
+        { id: "veggie-sticks", name: "Морковь, огурец, болгарский перец", ingredients: "" }
+      ]
+    },
+  ]
+};
 
 const DRINKS = [
   // =====================
