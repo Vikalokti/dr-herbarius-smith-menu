@@ -278,7 +278,7 @@ const SNACKS = {
       price: 390,
       image: "img/перекусы/image 179.png",
       constructor: {
-        bases: ["Классический", "Безлактозный"],
+        bases: ["100% Натуральный свежий йогурт из молока и закваски"],
         dryAddons: [
           { name: "Микс орехов", image: "img/перекусы/image 160-1.png" },
           { name: "Гранола ягодная", image: "img/перекусы/image 2.png" },
@@ -303,13 +303,51 @@ const SNACKS = {
       ]
     },
     {
-      id: "pastila",
-      name: "Пастила",
-      nameEn: "Fruit Pastila",
-      price: 499,
-      image: "img/перекусы/image 163.png",
+      id: "baked-pies",
+      name: "Пироги запечные из тонкого бездрожжевого теста с сочными начинками",
+      nameEn: "Baked Pies",
+      price: 390,
       items: [
-        { id: "pastila-fruit", name: "Фруктово-ягодная", ingredients: "" }
+        {
+          id: "pie-four-cheese",
+          name: "4 сыра",
+          ingredients: "Адыгейский сыр, сыр моцарелла, сыр сулугуни, сыр фетакса, томаты, петрушка, соль, специи",
+          image: "img/перекусы/4 сыра.png"
+        },
+        {
+          id: "pie-baked-veggies",
+          name: "С печеными овощами и сыром",
+          ingredients: "Баклажан, адыгейский сыр, голландский сыр, томаты, болгарский перец, петрушка",
+          image: "img/перекусы/С печеными овощами и сыром.png"
+        },
+        {
+          id: "pie-apple-cinnamon",
+          name: "С яблоком и корицей",
+          ingredients: "Яблоко, сахар, корица",
+          image: "img/перекусы/С яблоком и корицей.png"
+        }
+      ]
+    },
+    {
+      id: "desserts",
+      name: "Десерты",
+      nameEn: "Desserts",
+      isSectionTitle: true,
+      items: [
+        {
+          id: "banana-choc-cake",
+          name: "Кекс банан-шоколад",
+          price: 290,
+          ingredients: "Бананы свежие, шоколад, изюм, сироп топинамбура, овсян. молоко, грецкие орехи",
+          image: "img/перекусы/Кекс банан-шоколад.png"
+        },
+        {
+          id: "tartlet-caramel-nuts",
+          name: "Тарталетка «Орехи в соленой карамели»",
+          price: 350,
+          ingredients: "Грецкие орехи, миндаль, фундук, арахис, финики, карамель на кокосовых сливках",
+          image: "img/перекусы/Тарталетка _Орехи в соленой карамели_.png"
+        }
       ]
     },
     {
@@ -331,26 +369,6 @@ const SNACKS = {
       image: "img/перекусы/image 176.png",
       items: [
         { id: "batat-fries", name: "Батат запечённый с пармезаном", ingredients: "" }
-      ]
-    },
-    {
-      id: "pies",
-      name: "Пироги",
-      nameEn: "Botanical Pies",
-      priceNote: "Цена уточняется",
-      items: [
-        { id: "cranberry-lemon-pie", name: "Клюква — лимон", ingredients: "База-основа, гречневая мука, овсяная мука, клюква, лимон", image: "img/перекусы/Object.png" },
-        { id: "mango-coconut-pie", name: "Манго — кокос", ingredients: "База-основа, кокосовая мука, амарантовая мука, манго", image: "img/перекусы/Object-1.png" }
-      ]
-    },
-    {
-      id: "veggies",
-      name: "Овощные палочки",
-      nameEn: "Veggie Sticks",
-      price: 190,
-      image: "img/перекусы/image 175.png",
-      items: [
-        { id: "veggie-sticks", name: "Морковь, огурец, болгарский перец", ingredients: "" }
       ]
     },
   ]

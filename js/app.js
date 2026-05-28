@@ -205,6 +205,18 @@ const App = {
           </a>
         `;
       }
+      if (cat.id === 'snacks') {
+        return `
+          <a href="#category/${cat.id}" class="category-card" style="background: ${cat.colorLight}; color: ${cat.color};">
+            <div class="category-card-content">
+              <div class="category-card-subtitle" style="color: ${cat.color}99">${cat.nameEn}</div>
+              <div class="category-card-name" style="color: ${cat.color}">${cat.nameRu}</div>
+              <div class="category-card-desc" style="color: ${cat.color}cc">${cat.description}</div>
+            </div>
+            <div class="category-card-arrow" style="color: ${cat.color}">${this.icons.arrow}</div>
+          </a>
+        `;
+      }
       return `
         <a href="#category/${cat.id}" class="category-card" style="background: ${cat.colorLight}; color: ${cat.color};">
           <div class="category-card-content">
@@ -374,7 +386,7 @@ const App = {
 
             <div style="margin-top: var(--space-lg); margin-bottom: var(--space-sm);">
               <div style="font-size: 16px; font-weight: 700; color: var(--text-primary);">Ингредиенты</div>
-              <div style="font-size: 13px; color: var(--text-secondary); margin-top: 2px;">24 моно растения</div>
+              <div style="font-size: 13px; color: var(--text-secondary); margin-top: 2px;">${MONO_HERBS.length} моно растений</div>
             </div>
 
             <div class="mono-herbs-list">
@@ -598,15 +610,21 @@ const App = {
       `;
     }
 
-    if (section.id === 'pies' || section.id === 'veggies') {
+    if (section.id === 'desserts') {
       return `
-        <div class="snack-section">
-          <div class="snack-section-header">
-            <div>
-              <div class="snack-section-en">${section.nameEn || ''}</div>
-              <div class="snack-section-name">${section.name}</div>
-            </div>
-            <span class="snack-coming-soon">Скоро</span>
+        <div class="snack-section snack-section--desserts">
+          <div class="snack-desserts-title">ДЕСЕРТЫ</div>
+          <div class="snack-items">
+            ${section.items.map(item => `
+              <div class="snack-item">
+                ${item.image ? `<img src="${item.image}" alt="${item.name}" class="snack-item-img">` : ''}
+                <div class="snack-item-content">
+                  <div class="snack-item-name">${item.name}</div>
+                  ${item.ingredients ? `<div class="snack-item-ingredients">${item.ingredients}</div>` : ''}
+                </div>
+                ${GUEST_MODE ? '' : item.price ? `<div class="snack-item-price">${item.price} ₽</div>` : ''}
+              </div>
+            `).join('')}
           </div>
         </div>
       `;
@@ -622,11 +640,13 @@ const App = {
             </div>
             ${GUEST_MODE ? '' : `<div class="snack-section-price">${section.price} ₽</div>`}
           </div>
-          <div class="snack-lyo-grid">
+          <div class="snack-items">
             ${section.items.map(item => `
-              <div class="snack-lyo-item">
-                ${item.image ? `<img src="${item.image}" alt="${item.name}" class="snack-lyo-img">` : ''}
-                <div class="snack-lyo-name">${item.name}</div>
+              <div class="snack-item">
+                ${item.image ? `<img src="${item.image}" alt="${item.name}" class="snack-item-img">` : ''}
+                <div class="snack-item-content">
+                  <div class="snack-item-name">${item.name}</div>
+                </div>
               </div>
             `).join('')}
           </div>

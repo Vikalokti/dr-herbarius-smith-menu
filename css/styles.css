@@ -2078,6 +2078,19 @@ body {
   flex-shrink: 0;
 }
 
+.snack-desserts-title {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.snack-section--desserts {
+  padding-top: 4px;
+}
+
 /* ========================================
    TABLET+
    ======================================== */
