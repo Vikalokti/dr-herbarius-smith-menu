@@ -1690,7 +1690,7 @@ body {
    FIND US SECTION
    ======================================== */
 .find-us-top-photo {
-  width: 100%;
+  padding: 0 var(--space-lg);
 }
 
 .find-us-top-img {
@@ -1698,6 +1698,7 @@ body {
   height: 320px;
   object-fit: cover;
   display: block;
+  border-radius: var(--radius-lg);
 }
 
 .find-us-section {
@@ -1738,6 +1739,10 @@ body {
   height: auto;
   display: block;
   object-fit: contain;
+}
+
+.find-us-grid-full {
+  grid-column: 1 / -1;
 }
 
 .find-us-info {
