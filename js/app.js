@@ -232,6 +232,10 @@ const App = {
 
     main.innerHTML = `
       <div class="page-enter">
+        <div class="find-us-top-photo">
+          <img src="img/Как нас найти 1.jpeg" alt="Dr. Herbarius — Роза Хутор" class="find-us-top-img">
+        </div>
+
         <div class="page-title">
           <h1>Функциональные напитки</h1>
           <p>Выберите напиток по вашему состоянию</p>
@@ -242,9 +246,6 @@ const App = {
             <input type="text" placeholder="Поиск по ингредиентам или свойствам..." readonly>
           </div>
         </div>
-        <div class="find-us-top-photo">
-          <img src="img/Как нас найти 1.jpeg" alt="Dr. Herbarius — Роза Хутор" class="find-us-top-img">
-        </div>
 
         <div class="categories-grid">
           ${categoriesHTML}
@@ -253,8 +254,10 @@ const App = {
         <div class="find-us-section">
           <h2 class="find-us-title">Как нас найти</h2>
           <div class="find-us-card">
-            <img src="img/Как нас найти 2.jpeg" alt="Dr. Herbarius — Роза Хутор" class="find-us-img">
-            <img src="img/Как нас найти 3.jpeg" alt="Dr. Herbarius — Роза Хутор" class="find-us-img">
+            <div class="find-us-photos-grid">
+              <img src="img/Как нас найти 2.jpeg" alt="Dr. Herbarius — Роза Хутор" class="find-us-grid-img">
+              <img src="img/Как нас найти 3.jpeg" alt="Dr. Herbarius — Роза Хутор" class="find-us-grid-img">
+            </div>
             <div class="find-us-info">
               <div class="find-us-address">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="18" height="18"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
