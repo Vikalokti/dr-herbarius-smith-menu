@@ -232,10 +232,6 @@ const App = {
 
     main.innerHTML = `
       <div class="page-enter">
-        <div class="find-us-top-photo">
-          <img src="img/Как нас найти 1.jpeg" alt="Dr. Herbarius — Роза Хутор" class="find-us-top-img">
-        </div>
-
         <div class="page-title">
           <h1>Функциональные напитки</h1>
           <p>Выберите напиток по вашему состоянию</p>
@@ -257,7 +253,6 @@ const App = {
             <div class="find-us-photos-grid">
               <img src="img/Как нас найти 2.jpeg" alt="Dr. Herbarius — Роза Хутор" class="find-us-grid-img">
               <img src="img/Как нас найти 3.jpeg" alt="Dr. Herbarius — Роза Хутор" class="find-us-grid-img">
-              <img src="img/Как нас найти.jpeg" alt="Dr. Herbarius — Роза Хутор" class="find-us-grid-img find-us-grid-full">
             </div>
             <div class="find-us-info">
               <div class="find-us-address">
