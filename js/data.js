@@ -311,8 +311,8 @@ const SNACKS = {
         {
           id: "pie-four-cheese",
           name: "С сыром и шпинатом",
-          ingredients: "Адыгейский сыр, сыр моцарелла, сыр сулугуни, сыр фетакса, томаты, петрушка, соль, специи",
-          image: "img/перекусы/4 сыра.png"
+          ingredients: "Адыгейский сыр, голландский сыр, шпинат, кориандр свежий (кинза)",
+          image: "img/ccirom.png"
         },
         {
           id: "pie-baked-veggies",
@@ -356,7 +356,7 @@ const SNACKS = {
       nameEn: "Freeze-dried Berries",
       price: 690,
       items: [
-        { id: "strawberry-glazed", name: "Клубника в глазури", image: "img/перекусы/image 172.png" },
+        { id: "strawberry-glazed", name: "Клубника в темном шоколаде", image: "img/klubn.png" },
         { id: "blueberry-hazelnut", name: "Творожики с голубикой и фундуком", image: "img/перекусы/image 173.png" },
         { id: "passionfruit-yogurt", name: "Маракуйя в йогуртовой глазури", image: "img/перекусы/image 174.png" }
       ]
@@ -731,7 +731,7 @@ const DRINKS = [
     recommendation: "После Neuro Clear можно выбрать напиток категории Energy Fast Boost для физической энергии или Fermented & Prebio для восстановления микробиома и метаболического баланса.",
     activeComponents: ["L-теанин", "N-Acetyl-L-Tyrosine", "Mg L-треонат", "Цитиколин", "Экстракт бакопы", "Экстракт лимонника"],
     volume: "380/450 мл",
-    price: 890,
+    price: 990,
     calories: 0,
     temperature: ["65-70°C", "6-10°C"],
     whenToDrink: "Первая половина дня / интеллектуальная работа",
@@ -952,7 +952,7 @@ const DRINKS = [
     lifestyle: ["употребляйте напиток в течение 30 минут после тренировки", "поддерживайте достаточный водный баланс", "сочетайте с регулярной физической активностью"],
     recommendation: "После Recovery можно использовать напиток из категории Fermented & Prebio для поддержки пищеварения и метаболического баланса.",
     volume: "450 мл",
-    price: 690,
+    price: 890,
     calories: 260,
     effectDuration: "4-6 ч",
     temperature: ["6-10°C"],
