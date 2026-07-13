@@ -247,6 +247,16 @@ const App = {
           ${categoriesHTML}
         </div>
 
+        <div class="contacts-section">
+          <h2 class="contacts-title">Контакты</h2>
+          <p class="contacts-desc">Все наши ссылки в одном месте — Instagram, VK, Telegram и официальный сайт</p>
+          <a href="https://taplink.cc/dr.herbariussmith.?from=qr" target="_blank" class="contacts-btn contacts-btn-primary">Все ссылки</a>
+          <a href="https://t.me/herbarius_smith_bot" target="_blank" class="contacts-btn contacts-btn-secondary">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M11.944 0A12 12 0 1 0 24 12.056A12.01 12.01 0 0 0 11.944 0Zm5.654 7.304l-1.97 9.28c-.146.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.334-.373-.121l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.832.942Z"/></svg>
+            Погружение в проект и прямая связь с основателем
+          </a>
+        </div>
+
         <div class="find-us-section">
           <h2 class="find-us-title">Как нас найти</h2>
           <div class="find-us-card">
