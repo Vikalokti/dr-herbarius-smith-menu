@@ -1754,13 +1754,12 @@ body {
 }
 
 .contacts-btn-secondary {
-  background: var(--cat-mind-light);
-  color: var(--cat-mind);
-  border: 1px solid var(--cat-mind);
+  background: #E3F2FD;
+  color: #2196F3;
 }
 
 .contacts-btn-secondary:active {
-  background: var(--cat-mind-mid);
+  opacity: 0.7;
 }
 
 .contacts-btn svg {
