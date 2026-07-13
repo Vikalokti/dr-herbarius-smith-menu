@@ -1704,7 +1704,7 @@ body {
 .contacts-section {
   padding: 0 var(--space-lg);
   padding-top: var(--space-2xl);
-  padding-bottom: var(--space-2xl);
+  padding-bottom: var(--space-lg);
 }
 
 .contacts-title {
@@ -1746,7 +1746,7 @@ body {
 .contacts-btn-primary {
   background: var(--cat-vitamins);
   color: white;
-  margin-bottom: var(--space-md);
+  margin-bottom: calc(var(--space-md) + 25px);
 }
 
 .contacts-btn-primary:active {
