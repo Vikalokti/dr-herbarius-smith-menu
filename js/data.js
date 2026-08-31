@@ -280,10 +280,10 @@ const SNACKS = {
       price: 110,
       priceNote: "",
       items: [
-        { id: "strawberry", name: "Клубника", nameEn: "Strawberry", ingredients: "База-основа, сублимированная клубника", image: "img/Клубника.png" },
-        { id: "passionfruit", name: "Маракуйя", nameEn: "Passionfruit", ingredients: "База-основа, сублимированная маракуйя", image: "img/Маракуйя.png" },
-        { id: "raspberry", name: "Малина", nameEn: "Raspberry", ingredients: "База-основа, сублимированная малина", image: "img/Малина.png" },
-        { id: "carob-cacao", name: "Кероб, какао", nameEn: "Dark Carob Cacao", ingredients: "База-основа, кэроб, какао", image: "img/Кероб, какао.png" }
+        { id: "strawberry", name: "Клубника", nameEn: "Strawberry", ingredients: "База-основа, сублимированная клубника", image: "img/перекусы/Клубника.png" },
+        { id: "passionfruit", name: "Маракуйя", nameEn: "Passionfruit", ingredients: "База-основа, сублимированная маракуйя", image: "img/перекусы/Маракуйя.png" },
+        { id: "raspberry", name: "Малина", nameEn: "Raspberry", ingredients: "База-основа, сублимированная малина", image: "img/перекусы/Малина.png" },
+        { id: "carob-cacao", name: "Кероб, какао", nameEn: "Dark Carob Cacao", ingredients: "База-основа, кэроб, какао", image: "img/перекусы/Кероб, какао.png" }
       ]
     },
     {
@@ -292,9 +292,9 @@ const SNACKS = {
       nameEn: "Botanical Cookies",
       price: 190,
       items: [
-        { id: "chocolate-cookie", name: "Шоколад", nameEn: "Chocolate Cream", ingredients: "База-основа, овсяная мука, льняная мука, какао, кокосовое масло, соль", image: "img/перекусы/image 160.png" },
-        { id: "lemon-cranberry-cookie", name: "Клюква — лимон", nameEn: "Lemon Cranberry", ingredients: "База-основа, гречневая мука, овсяная мука, клюква, лимонная цедра, лимонный сок, кокосовое масло, соль", image: "img/перекусы/image 159.png" },
-        { id: "mango-coconut-cookie", name: "Манго — кокос", nameEn: "Coconut Mango", ingredients: "База-основа, кокосовая мука, амарантовая мука, манго порошок, кусочки манго, кокосовая стружка, кокосовое масло, соль", image: "img/перекусы/image 158.png" }
+        { id: "chocolate-cookie", name: "Шоколад", nameEn: "Chocolate Cream", ingredients: "База-основа, овсяная мука, льняная мука, какао, кокосовое масло, соль", image: "img/перекусы/Шоколад.png" },
+        { id: "lemon-cranberry-cookie", name: "Клюква — лимон", nameEn: "Lemon Cranberry", ingredients: "База-основа, гречневая мука, овсяная мука, клюква, лимонная цедра, лимонный сок, кокосовое масло, соль", image: "img/перекусы/Клюква - лимон.png" },
+        { id: "mango-coconut-cookie", name: "Манго — кокос", nameEn: "Coconut Mango", ingredients: "База-основа, кокосовая мука, амарантовая мука, манго порошок, кусочки манго, кокосовая стружка, кокосовое масло, соль", image: "img/перекусы/Манго - кокос.png" }
       ]
     },
     {
@@ -302,9 +302,9 @@ const SNACKS = {
       name: "Ассорти стаканы",
       nameEn: "Assorted Cups",
       items: [
-        { id: "nuts-raisins", name: "Орехи с изюмом и клюквой", price: 399, ingredients: "грецкий орех, миндаль, фундук, кешью, клюква вяленная, курага, изюм", image: "img/перекусы/image 156.png" },
-        { id: "chips-nuts", name: "Чипсы, орехи и сухофрукты", price: 499, ingredients: "апельсин, яблоко, грецкий орех, миндаль, фундук, кешью, клюква вяленная, курага, изюм", image: "img/перекусы/image 161.png" },
-        { id: "lukum-almonds", name: "Лукум, миндаль и финики", price: 490, ingredients: "лукум, миндаль, финики", image: "img/перекусы/image 162.png" }
+        { id: "nuts-raisins", name: "Орехи с изюмом и клюквой", price: 399, ingredients: "грецкий орех, миндаль, фундук, кешью, клюква вяленная, курага, изюм", image: "img/перекусы/Орехи с изюмом и клюквой.png" },
+        { id: "chips-nuts", name: "Чипсы, орехи и сухофрукты", price: 499, ingredients: "апельсин, яблоко, грецкий орех, миндаль, фундук, кешью, клюква вяленная, курага, изюм", image: "img/перекусы/Чипсы, орехи и сухофрукты.png" },
+        { id: "lukum-almonds", name: "Лукум, миндаль и финики", price: 490, ingredients: "лукум, миндаль, финики", image: "img/перекусы/Лукум, миндаль и финики.png" }
       ]
     },
     {
@@ -317,7 +317,7 @@ const SNACKS = {
           id: "pie-four-cheese",
           name: "С сыром и шпинатом",
           ingredients: "Адыгейский сыр, голландский сыр, шпинат, кориандр свежий (кинза)",
-          image: "img/ccirom.png"
+          image: "img/перекусы/С сыром и шпинатом.png"
         },
         {
           id: "pie-baked-veggies",
@@ -350,13 +350,13 @@ const SNACKS = {
     },
     {
       id: "lyophilized",
-      name: "Сублимированные ягоды",
-      nameEn: "Freeze-dried Berries",
+      name: "Сублимированные ягоды и орехи в глазури",
+      nameEn: "Freeze-dried Berries & Glazed Nuts",
       price: 690,
       items: [
-        { id: "strawberry-glazed", name: "Клубника в темном шоколаде", image: "img/klubn.png" },
-        { id: "blueberry-hazelnut", name: "Творожики с голубикой и фундуком", image: "img/перекусы/image 173.png" },
-        { id: "passionfruit-yogurt", name: "Маракуйя в йогуртовой глазури", image: "img/перекусы/image 174.png" }
+        { id: "walnut-coffee-caramel", name: "Грецкий орех в кофейно-карамельной глазури", ingredients: "Грецкий орех, белый шоколад, карамель, кофейное зерно", image: "img/перекусы/Грецкий орех в кофейно-карамельной глазури.png" },
+        { id: "almond-gingerbread", name: "Миндаль в пряничной глазури", ingredients: "Жаренный миндаль, белый и молочный шоколад, специи: соль, корица, кориандр, мускатный орех, кардамон, гвоздика, бадьян и душистый перец.", image: "img/перекусы/Миндаль в пряничной глазури.png" },
+        { id: "passionfruit-yogurt", name: "Маракуйя в йогуртовой глазури", ingredients: "Сублимированная маракуйя, йогуртовая глазурь", image: "img/перекусы/Маракуйя в йогуртовой глазури.png" }
       ]
     },
     {
@@ -364,7 +364,7 @@ const SNACKS = {
       name: "Запечённый батат с пармезаном",
       nameEn: "Sweet Potato Fries",
       price: 490,
-      image: "img/перекусы/image 176.png",
+      image: "img/перекусы/Запеченный батат с пармезаном.png",
       items: [
         { id: "batat-fries", name: "Батат запечённый с пармезаном", ingredients: "" }
       ]
@@ -378,7 +378,7 @@ const DRINKS = [
   // =====================
   {
     id: "citrus-vita",
-    image: "img/Citrus Vita@2x.png",
+    image: "img/Напитки/Цитрусовый витамин.png",
     nameEn: "Citrus Vita",
     nameRu: "Цитрусовый витамин",
     category: "vitamins",
@@ -407,7 +407,7 @@ const DRINKS = [
   },
   {
     id: "berry-vita",
-    image: "img/Berry Vita@2x.png",
+    image: "img/Напитки/Ягодный витамин.png",
     nameEn: "Berry Vita",
     nameRu: "Ягодный витамин",
     category: "vitamins",
@@ -423,25 +423,8 @@ const DRINKS = [
     hasBoosters: true
   },
   {
-    id: "green-vita",
-    image: "img/Green Vita@2x.png",
-    nameEn: "Green Vita",
-    nameRu: "Зелёный витамин",
-    category: "vitamins",
-    functionShort: "Comprehensive Vitamin Support",
-    functionRu: "Авокадо, киви и шпинат — растительные минералы и витамины в чистом виде",
-    ingredients: "Авокадо, мякоть зелёного горошка, щавель, огурец, яблоко, киви, сироп агавы, сироп огурца, вода",
-    activeComponents: ["Vit C", "Vit K", "Vit E", "K", "Mg", "Растительные антиоксиданты"],
-    volume: "450 мл",
-    price: 790,
-    calories: 300,
-    temperature: ["17-24°C", "6-10°C"],
-    whenToDrink: "В течение дня",
-    hasBoosters: true
-  },
-  {
     id: "tropical-vita",
-    image: "img/Tropical Vita@2x.png",
+    image: "img/Напитки/Тропический витамин.png",
     nameEn: "Tropical Vita",
     nameRu: "Тропический витамин",
     category: "vitamins",
@@ -457,42 +440,8 @@ const DRINKS = [
     hasBoosters: true
   },
   {
-    id: "flush-vita",
-    image: "img/Root Power Vita@2x.png",
-    nameEn: "Fiber Flush Vita",
-    nameRu: "Файбер Флаш Вита",
-    category: "vitamins",
-    functionShort: "Comprehensive Vitamin Support",
-    functionRu: "Киви, яблоко и ревень — лёгкость пищеварения и природная клетчатка каждый день",
-    ingredients: "Киви, яблоко, сельдерей, сироп топинамбура, мякоть ревеня, огурец, цедра лайма",
-    activeComponents: ["Vit C", "K", "Растительная клетчатка", "Органические кислоты"],
-    volume: "450 мл",
-    price: 790,
-    calories: 190,
-    temperature: ["17-24°C", "6-10°C"],
-    whenToDrink: "В течение дня",
-    hasBoosters: true
-  },
-  {
-    id: "root-power-vita",
-    image: "img/Fiber Flush Vita@2x.png",
-    nameEn: "Root Power Vita",
-    nameRu: "Корневая сила",
-    category: "vitamins",
-    functionShort: "Comprehensive Vitamin Support",
-    functionRu: "Морковь, свёкла и облепиха — природный бета-каротин и железо из корнеплодов",
-    ingredients: "Морковный фреш, свекольный кордиал, имбирный сироп, берёзовый сок, яблоко, мякоть облепихи, ароматическая вода черёмухи",
-    activeComponents: ["Vit C", "Vit A (Бета-каротин)", "Fe", "Природные антиоксиданты", "K"],
-    volume: "450 мл",
-    price: 790,
-    calories: 220,
-    temperature: ["17-24°C", "6-10°C"],
-    whenToDrink: "В течение дня",
-    hasBoosters: true
-  },
-  {
     id: "lemon-vita",
-    image: "img/Lemon Vita@2x.png",
+    image: "img/Напитки/Лимонный витамин.png",
     nameEn: "Lemon Vita",
     nameRu: "Лимонный витамин",
     category: "vitamins",
@@ -513,7 +462,7 @@ const DRINKS = [
   // =====================
   {
     id: "silent-warming",
-    image: "img/Silent Warming@2x.png",
+    image: "img/Напитки/Тихое тепло.png",
     nameEn: "Silent Warming",
     nameRu: "Тихое тепло",
     category: "mind",
@@ -585,7 +534,7 @@ const DRINKS = [
   },
   {
     id: "serotonin-sun",
-    image: "img/Serotonin Sun@2x.png",
+    image: "img/Напитки/Серотониновое солнце.png",
     nameEn: "Serotonin Sun",
     nameRu: "Серотониновое солнце",
     category: "mind",
@@ -665,7 +614,7 @@ const DRINKS = [
   },
   {
     id: "neuro-clear",
-    image: "img/NEURO CLEAR.png",
+    image: "img/Напитки/Нейро Ясность.png",
     nameEn: "Neuro Clear",
     nameRu: "Нейро Ясность",
     category: "mind",
@@ -737,7 +686,7 @@ const DRINKS = [
   },
   {
     id: "mental-clear",
-    image: "img/Mental Clear Formula.png",
+    image: "img/Напитки/Ментальная ясность.png",
     nameEn: "Mental Clear Formula",
     nameRu: "Ментальная ясность",
     category: "mind",
@@ -858,7 +807,7 @@ const DRINKS = [
   // =====================
   {
     id: "pre-work",
-    image: "img/Pre-Work@2x.png",
+    image: "img/Напитки/Предстарт.png",
     nameEn: "Pre-Work",
     nameRu: "Предстарт",
     category: "sport",
@@ -912,9 +861,9 @@ const DRINKS = [
   },
   {
     id: "recovery",
-    image: "img/Recovery@2x.png",
+    image: "img/Напитки/Восстановление.png",
     nameEn: "Recovery",
-    nameRu: "Рикавери",
+    nameRu: "Восстановление",
     category: "sport",
     functionShort: "Post-Workout Muscle Recovery & Electrolyte Replenishment",
     functionRu: "Восстановление мышц после нагрузки, восполнение аминокислот и электролитов",
@@ -959,7 +908,7 @@ const DRINKS = [
   },
   {
     id: "electro-balance",
-    image: "img/Electro Balance@2x.png",
+    image: "img/Напитки/Электролитный баланс.png",
     nameEn: "Electro Balance",
     nameRu: "Электролитный баланс",
     category: "sport",
@@ -1005,7 +954,7 @@ const DRINKS = [
   },
   {
     id: "endurance",
-    image: "img/Endurance@2x.png",
+    image: "img/Напитки/Выносливость.png",
     nameEn: "Endurance",
     nameRu: "Выносливость",
     category: "sport",
@@ -1060,7 +1009,7 @@ const DRINKS = [
   // =====================
   {
     id: "tibetan-monk",
-    image: "img/Tibetan Monk@2x.png",
+    image: "img/Напитки/Тибетский монах.png",
     nameEn: "Tibetan Monk",
     nameRu: "Тибетский монах",
     category: "elixirs",
@@ -1102,7 +1051,7 @@ const DRINKS = [
     whenUseful: ["после эмоционально насыщенного дня", "перед медитацией или практиками осознанности", "в моменты внутреннего напряжения", "для восстановления ментального равновесия"],
     lifestyle: ["употребляйте напиток в спокойной обстановке", "пейте медленно, концентрируясь на вкусе и дыхании", "используйте как вечерний ритуал восстановления"],
     recommendation: "После эликсира Тибетский Монах можно выбрать напиток категории Beauty или Fermented & Prebio, чтобы поддержать восстановление организма на физиологическом уровне.",
-    volume: "380 мл",
+    volume: "380/450 мл",
     price: 790,
     calories: 170,
     effectDuration: "6-8 ч",
@@ -1112,7 +1061,7 @@ const DRINKS = [
   },
   {
     id: "caucasian-longevity",
-    image: "img/Caucasian Longevity@2x.png",
+    image: "img/Напитки/Кавказский долгожитель.png",
     nameEn: "Caucasian Longevity",
     nameRu: "Кавказский долгожитель",
     category: "elixirs",
@@ -1154,7 +1103,7 @@ const DRINKS = [
     whenUseful: ["в периоды повышенной нагрузки", "при ощущении усталости и снижения энергии", "для поддержки сердечно-сосудистой системы", "как напиток ежедневной антиоксидантной поддержки"],
     lifestyle: ["употребляйте напиток в первой половине дня", "сочетайте с активным образом жизни", "используйте как часть ежедневной поддержки организма"],
     recommendation: "После эликсира Кавказский Долгожитель можно выбрать напиток категории Fermented & Prebio, чтобы поддержать микробиом и обменные процессы организма.",
-    volume: "380 мл",
+    volume: "380/450 мл",
     price: 790,
     calories: 180,
     effectDuration: "5-6 ч",
@@ -1164,7 +1113,7 @@ const DRINKS = [
   },
   {
     id: "peruvian-shaman",
-    image: "img/Peruvian Shaman@2x.png",
+    image: "img/Напитки/Перуанский шаман.png",
     nameEn: "Peruvian Shaman",
     nameRu: "Перуанский шаман",
     category: "elixirs",
@@ -1204,7 +1153,7 @@ const DRINKS = [
     whenUseful: ["в периоды высокой умственной нагрузки", "перед важными событиями или выступлениями", "при необходимости повысить концентрацию", "для активации энергии в течение дня"],
     lifestyle: ["употребляйте напиток в первой половине дня", "используйте перед интеллектуальной или творческой работой", "сочетайте с активным ритмом жизни"],
     recommendation: "После эликсира Перуанский Шаман можно выбрать напиток категории Energy Fast Boost для поддержания активной энергии или Beauty, чтобы поддержать восстановление организма.",
-    volume: "380 мл",
+    volume: "380/450 мл",
     price: 790,
     calories: 200,
     effectDuration: "4-6 ч",
@@ -1218,7 +1167,7 @@ const DRINKS = [
   // =====================
   {
     id: "neuro-potok",
-    image: "img/Neuro Flow.png",
+    image: "img/Напитки/Нейропоток.png",
     nameEn: "Neuro Flow",
     nameRu: "Нейропоток",
     category: "energy-boost",
@@ -1289,7 +1238,7 @@ const DRINKS = [
   },
   {
     id: "energo-ritm",
-    image: "img/Energy Rhythm.png",
+    image: "img/Напитки/Энергоритм.png",
     nameEn: "Energy Rhythm",
     nameRu: "Энергоритм",
     category: "energy-boost",
@@ -1363,7 +1312,7 @@ const DRINKS = [
   },
   {
     id: "yasny-fokus",
-    image: "img/Clear Focus.png",
+    image: "img/Напитки/Ясный фокус.png",
     nameEn: "Clear Focus",
     nameRu: "Ясный фокус",
     category: "energy-boost",
@@ -1502,7 +1451,7 @@ const DRINKS = [
   },
   {
     id: "inner-flow",
-    image: "img/Inner Flow.png",
+    image: "img/Напитки/Внутренний поток.png",
     nameEn: "Inner Flow",
     nameRu: "Внутренний поток",
     category: "microbiota",
@@ -1629,7 +1578,7 @@ const DRINKS = [
   // =====================
   {
     id: "rose-elastic-glow",
-    image: "img/Rose Elastic Glow.png",
+    image: "img/Напитки/Розовое сияние упругости.png",
     nameEn: "Rose Elastic Glow",
     nameRu: "Эластичность и сияние",
     category: "beauty",
@@ -1693,7 +1642,7 @@ const DRINKS = [
   },
   {
     id: "berry-shield",
-    image: "img/Berry Shield.png",
+    image: "img/Напитки/Ягодный щит.png",
     nameEn: "Berry Shield",
     nameRu: "Ягодный щит",
     category: "beauty",
@@ -1758,79 +1707,13 @@ const DRINKS = [
     whenToDrink: "В течение дня / антиоксидантная защита",
     doctorNote: "«Антиоксиданты — это природная система защиты клеток. Когда мы поддерживаем её регулярно, организм сохраняет энергию, здоровье и молодость.»"
   },
-  {
-    id: "keratin-balance",
-    image: "img/Keratin Balance.png",
-    nameEn: "Keratin Balance",
-    nameRu: "Кератин Баланс",
-    category: "beauty",
-    functionShort: "Keratin Synthesis Support & Hair & Nail Strength",
-    functionRu: "Поддержка синтеза кератина и укрепление волос и ногтей",
-    description: "Он создан для поддержки естественного синтеза кератина — ключевого структурного белка, из которого формируются волосы и ногти. Формула напитка объединяет аминокислоты, микроэлементы и растительные экстракты, которые помогают организму активировать процессы формирования кератиновых структур, поддерживать питание волосяных фолликулов и укреплять ногтевую пластину.\nЭтот напиток работает не за счёт добавления кератина извне, а за счёт поддержки естественных процессов его синтеза в организме.",
-    phytoComposition: [
-      { name: "Лепестки розы", effect: "Источник биофлавоноидов и антиоксидантов, поддерживает микроциркуляцию." },
-      { name: "Лемонграсс", effect: "Стимулирует обменные процессы и мягко поддерживает очищение организма." },
-      { name: "Имбирь сушёный", effect: "Усиливает кровообращение и улучшает доставку питательных веществ к тканям." },
-      { name: "Шиповник", effect: "Природный источник витамина C и антиоксидантов." }
-    ],
-    fruitBase: [
-      { name: "Сироп огурца", effect: "Формирует свежий зелёный профиль и лёгкую охлаждающую ноту." },
-      { name: "Сироп яблока", effect: "Добавляет мягкую фруктовую сладость." },
-      { name: "Сироп лемонграсса", effect: "Усиливает цитрусово-травяную свежесть." },
-      { name: "Раствор яблочной кислоты 2%", effect: "Создаёт освежающую кислотность." },
-      { name: "Мякоть зелёного горошка", effect: "Добавляет мягкую растительную текстуру и фитонутриенты." },
-      { name: "Мякоть бергамота", effect: "Придаёт цитрусовую глубину и лёгкую ароматическую горчинку." },
-      { name: "Мёд алоэ", effect: "Мягкая натуральная сладость и поддержка гидратации." },
-      { name: "Аромавода жасмина", effect: "Добавляет тонкий цветочный аромат." }
-    ],
-    nutraceuticals: [
-      { name: "Цинк", effect: "Поддерживает рост волос и укрепление ногтей, участвует в синтезе белков." },
-      { name: "Витамин B6", effect: "Регулирует обмен аминокислот и поддерживает синтез белковых структур." },
-      { name: "L-цистеин", effect: "Аминокислота, являющаяся ключевым строительным компонентом кератина." },
-      { name: "Экстракт крапивы", effect: "Источник минералов и фитонутриентов, поддерживающих здоровье волос." },
-      { name: "Экстракт лимонника китайского", effect: "Адаптоген, поддерживающий обменные процессы и микроциркуляцию." }
-    ],
-    simpleWords: [
-      "поддерживать синтез кератина",
-      "укреплять волосы и ногти",
-      "улучшать питание волосяных фолликулов",
-      "поддерживать баланс микроэлементов"
-    ],
-    timeline: [
-      { time: "5 минут", title: "Активация кровообращения", effect: "Фитоотвар розы, шиповника и лемонграсса начинает мягко активировать кровообращение и обменные процессы.", feeling: "Вы почувствуете лёгкую свежесть и ощущение чистоты." },
-      { time: "10 минут", title: "Микроциркуляция", effect: "Имбирь и лимонник стимулируют микроциркуляцию и обмен веществ.", feeling: "Вы можете почувствовать лёгкую бодрость и прилив энергии." },
-      { time: "15 минут", title: "Аминокислотный обмен", effect: "L-цистеин начинает участвовать в обмене аминокислот, необходимых для формирования кератина.", feeling: "Организм активирует процессы клеточного обновления." },
-      { time: "20 минут", title: "Синтез белков", effect: "Цинк и витамин B6 включаются в реакции синтеза белков и регуляции метаболических процессов.", feeling: "Вы можете почувствовать состояние внутреннего баланса и лёгкости." },
-      { time: "30-40 минут", title: "Минерализация", effect: "Экстракт крапивы поддерживает минерализацию организма и питание тканей.", feeling: "Организм постепенно переходит в режим восстановления." },
-      { time: "50+ минут", title: "Устойчивый синтез", effect: "Активные компоненты продолжают участвовать в обменных процессах, поддерживая синтез структурных белков волос и ногтей.", feeling: "Сохраняется состояние внутреннего баланса." }
-    ],
-    sensorProfile: "Аромат напитка раскрывается свежими зелёными нотами огурца и яблока, дополненными лёгким цветочным оттенком жасмина. Во вкусе сначала ощущается растительная свежесть, затем появляется цитрусовая кислинка бергамота и яблочной кислоты. В послевкусии проявляется мягкая сладость мёда алоэ и сиропа агавы. Текстура лёгкая и освежающая.",
-    whenUseful: [
-      "при повышенной ломкости волос и ногтей",
-      "в период повышенных стрессовых нагрузок",
-      "при необходимости поддержать баланс микроэлементов",
-      "как часть программы поддержки красоты и здоровья"
-    ],
-    lifestyle: [
-      "Поддерживайте достаточный уровень гидратации",
-      "Включайте в рацион продукты, богатые белком",
-      "Уделяйте внимание полноценному сну"
-    ],
-    recommendation: "Через 1–2 часа после напитка Кератин Баланс можно попробовать напиток с функцией антиоксидантной защиты, например Berry Shield.",
-    activeComponents: ["Zn", "Vit B6", "L-цистеин", "Экстракт крапивы", "Экстракт лимонника"],
-    volume: "380 мл",
-    price: 790,
-    temperature: ["6-10°C", "17-24°C"],
-    whenToDrink: "В течение дня / поддержка волос и ногтей",
-    doctorNote: "«Здоровые волосы и крепкие ногти формируются не только снаружи. Они начинаются с правильного баланса аминокислот, микроэлементов и обменных процессов внутри организма.»"
-  },
 
   // =====================
   // FIBER TONICS
   // =====================
   {
     id: "fiber-comfort",
-    image: "img/Fiber Comfort.png",
+    image: "img/Напитки/Файбер Комфорт.png",
     nameEn: "Fiber Comfort",
     nameRu: "Файбер Комфорт",
     category: "microbiota",
@@ -2080,7 +1963,7 @@ const DRINKS = [
   },
   {
     id: "immunoferm",
-    image: "img/Immunoferm.png",
+    image: "img/Напитки/Иммуноферм.png",
     nameEn: "Immunoferm",
     nameRu: "Иммуноферм",
     category: "microbiota",
@@ -2481,7 +2364,7 @@ const DRINKS = [
   // =====================
   {
     id: "purify-tonic",
-    image: "img/Purify Tonic@2x.png",
+    image: "img/Напитки/Тоник Очищения.png",
     nameEn: "Purify Tonic",
     nameRu: "Тоник Очищения",
     category: "detox",
@@ -2525,7 +2408,7 @@ const DRINKS = [
   },
   {
     id: "alkaline-water",
-    image: "img/Alkaline Water@2x.png",
+    image: "img/Напитки/Щелочная Минеральная Вода.png",
     nameEn: "Alkaline Water",
     nameRu: "Щелочная Минеральная Вода",
     category: "detox",
@@ -2566,7 +2449,7 @@ const DRINKS = [
   },
   {
     id: "liver-flow",
-    image: "img/Liver Flow@2x.png",
+    image: "img/Напитки/Поток Печени.png",
     nameEn: "Liver Flow",
     nameRu: "Поток Печени",
     category: "detox",
@@ -2616,76 +2499,77 @@ const DRINKS = [
   // =====================
   {
     id: "cold-brew-coffee",
-    image: "img/Кофе Колд Брю.png",
+    image: "img/Напитки/Колд Брю кофе.png",
     nameEn: "Cold Brew Coffee",
-    nameRu: "Кофе Колд Брю",
+    nameRu: "Колд Брю Кофе",
     category: "tea-coffee",
     functionShort: "Gentle Tonic & Mental Clarity",
     functionRu: "Мягко тонизирует, помогает сохранять концентрацию и поддерживает ясность мышления",
     fruitBase: [
-      { name: "100% арабика из Эфиопии" },
-      { name: "Сироп лесной орех" },
-      { name: "Банан" }
+      { name: "100 % арабика из Эфиопии, деликатный кофе холодного настоя с ярким ароматом банана и лесного ореха" }
     ],
     price: 390,
-    temperature: ["65-70°C", "17-24°C", "6-10°C"],
+    volume: "450 мл",
+    temperature: ["6-10°C"],
     whenToDrink: "В течение дня"
   },
   {
     id: "bumble-coffee",
-    image: "img/Кофе Бамбл.png",
-    nameEn: "Bumble Coffee",
-    nameRu: "Кофе Бамбл",
+    image: "img/Напитки/Колд Брю Бамбл.png",
+    nameEn: "Cold Brew Bumble",
+    nameRu: "Колд Брю Бамбл",
     category: "tea-coffee",
     functionShort: "Gentle Tonic & Mental Clarity",
     functionRu: "Мягко тонизирует, помогает сохранять концентрацию и поддерживает ясность мышления",
     fruitBase: [
-      { name: "Кофе Колд Брю" },
+      { name: "Колд Брю Кофе" },
       { name: "Фреш апельсина" },
       { name: "Сироп на выбор" }
     ],
     price: 390,
-    temperature: ["65-70°C", "17-24°C", "6-10°C"],
+    volume: "450 мл",
+    temperature: ["6-10°C"],
     whenToDrink: "В течение дня"
   },
   {
     id: "herbal-tonic-coffee",
-    image: "img/Кофе Хербл Тоник.png",
-    nameEn: "Herbal Tonic Coffee",
-    nameRu: "Кофе Хербл Тоник",
+    image: "img/Напитки/Колд Брю Хербл Тоник.png",
+    nameEn: "Cold Brew Herbal Tonic",
+    nameRu: "Колд Брю Хербл Тоник",
     category: "tea-coffee",
     functionShort: "Gentle Tonic & Mental Clarity",
     functionRu: "Мягко тонизирует, помогает сохранять концентрацию и поддерживает ясность мышления",
     fruitBase: [
-      { name: "Кофе Колд Брю" },
+      { name: "Колд Брю Кофе" },
       { name: "Тоник" },
       { name: "Настой гибискуса" }
     ],
     price: 390,
-    temperature: ["65-70°C", "17-24°C", "6-10°C"],
+    volume: "450 мл",
+    temperature: ["6-10°C"],
     whenToDrink: "В течение дня"
   },
   {
     id: "milk-coffee",
-    image: "img/Кофе Милк.png",
-    nameEn: "Milk Coffee",
-    nameRu: "Кофе Милк",
+    image: "img/Напитки/Колд Брю Латте.png",
+    nameEn: "Cold Brew Latte",
+    nameRu: "Колд Брю Латте",
     category: "tea-coffee",
     functionShort: "Gentle Tonic & Mental Clarity",
     functionRu: "Мягко тонизирует, помогает сохранять концентрацию и поддерживает ясность мышления",
     fruitBase: [
-      { name: "Кофе Колд Брю" },
+      { name: "Колд Брю Кофе" },
       { name: "Молоко на выбор (банановое, миндальное, кокосовое)" }
     ],
     price: 390,
-    temperature: ["65-70°C", "17-24°C", "6-10°C"],
+    temperature: ["65-70°C", "6-10°C"],
     whenToDrink: "В течение дня"
   },
   {
     id: "bumble-matcha",
-    image: "img/Матча Бамбл.png",
+    image: "img/Напитки/Бамбл Матча.png",
     nameEn: "Bumble Matcha",
-    nameRu: "Матча Бамбл",
+    nameRu: "Бамбл Матча",
     category: "tea-coffee",
     functionShort: "Sustained Energy & Focus",
     functionRu: "Поддерживает концентрацию, мягко тонизирует и обеспечивает длительное ощущение энергии",
@@ -2695,12 +2579,13 @@ const DRINKS = [
       { name: "Сироп на выбор" }
     ],
     price: 390,
-    temperature: ["65-70°C", "17-24°C", "6-10°C"],
+    volume: "450 мл",
+    temperature: ["6-10°C"],
     whenToDrink: "В течение дня"
   },
   {
     id: "herbal-tonic-matcha",
-    image: "img/Матча Хербл Тоник.png",
+    image: "img/Напитки/Матча Хербл Тоник.png",
     nameEn: "Herbal Tonic Matcha",
     nameRu: "Матча Хербл Тоник",
     category: "tea-coffee",
@@ -2712,14 +2597,15 @@ const DRINKS = [
       { name: "Настой гибискуса" }
     ],
     price: 390,
-    temperature: ["65-70°C", "17-24°C", "6-10°C"],
+    volume: "450 мл",
+    temperature: ["6-10°C"],
     whenToDrink: "В течение дня"
   },
   {
     id: "matcha-milk",
-    image: "img/Матча Милк.png",
-    nameEn: "Matcha Milk",
-    nameRu: "Матча Милк",
+    image: "img/Напитки/Матча Латте.png",
+    nameEn: "Matcha Latte",
+    nameRu: "Матча Латте",
     category: "tea-coffee",
     functionShort: "Sustained Energy & Focus",
     functionRu: "Поддерживает концентрацию, мягко тонизирует и обеспечивает длительное ощущение энергии",
@@ -2728,12 +2614,12 @@ const DRINKS = [
       { name: "Молоко на выбор (банановое, миндальное, кокосовое)" }
     ],
     price: 390,
-    temperature: ["65-70°C", "17-24°C", "6-10°C"],
+    temperature: ["65-70°C", "6-10°C"],
     whenToDrink: "В течение дня"
   },
   {
     id: "thai-tea",
-    image: "img/Тайский чай.png",
+    image: "img/Напитки/Тайский чай.png",
     nameEn: "Thai Tea",
     nameRu: "Тайский чай",
     category: "tea-coffee",
@@ -2745,24 +2631,24 @@ const DRINKS = [
       { name: "Молоко концентрированное" }
     ],
     price: 390,
-    temperature: ["65-70°C", "17-24°C", "6-10°C"],
+    temperature: ["65-70°C", "6-10°C"],
     whenToDrink: "В течение дня"
   },
   {
     id: "local-tea",
-    image: "img/Чай Локал.png",
+    image: "img/Напитки/Локал Чай.png",
     nameEn: "Local Tea",
-    nameRu: "Чай Локал",
+    nameRu: "Локал Чай",
     category: "tea-coffee",
     functionShort: "Refreshment & Hydration",
     functionRu: "Освежает, поддерживает водный баланс и сохраняет ощущение лёгкости",
     fruitBase: [
-      { name: "Чёрный тайский чай" },
-      { name: "Молоко сгущённое" },
-      { name: "Молоко концентрированное" }
+      { name: "Краснодарский чай" },
+      { name: "Сок абхазского лимона" },
+      { name: "Мёд разнотравье" }
     ],
     price: 390,
-    temperature: ["65-70°C", "17-24°C", "6-10°C"],
+    temperature: ["65-70°C", "6-10°C"],
     whenToDrink: "В течение дня"
   }
 ];

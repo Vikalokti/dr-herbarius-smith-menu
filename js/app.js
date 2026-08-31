@@ -95,10 +95,7 @@ const App = {
   drinkEmoji: {
     'citrus-vita': '\u{1F34A}',
     'berry-vita': '\u{1F347}',
-    'green-vita': '\u{1F96C}',
     'tropical-vita': '\u{1F34D}',
-    'flush-vita': '\u{1F95D}',
-    'root-power-vita': '\u{1F955}',
     'lemon-vita': '\u{1F34B}',
     'silent-warming': '\u{1F33A}',
     'serotonin-sun': '\u2600\uFE0F',
@@ -112,7 +109,6 @@ const App = {
     'cell-flow': '\u{1F33F}',
     'rose-elastic-glow': '\u{1F339}',
     'berry-shield': '\u{1F347}',
-    'keratin-balance': '\u{1F485}',
     'fiber-comfort': '\u{1F33E}',
     'metabo-control': '\u{1F4AA}',
     'clear-fiber': '\u{1F343}',
@@ -638,30 +634,6 @@ const App = {
                   ${item.ingredients ? `<div class="snack-item-ingredients">${item.ingredients}</div>` : ''}
                 </div>
                 ${GUEST_MODE ? '' : item.price ? `<div class="snack-item-price">${item.price} ₽</div>` : ''}
-              </div>
-            `).join('')}
-          </div>
-        </div>
-      `;
-    }
-
-    if (section.id === 'lyophilized') {
-      return `
-        <div class="snack-section">
-          <div class="snack-section-header">
-            <div>
-              <div class="snack-section-en">${section.nameEn}</div>
-              <div class="snack-section-name">${section.name}</div>
-            </div>
-            ${GUEST_MODE ? '' : `<div class="snack-section-price">${section.price} ₽</div>`}
-          </div>
-          <div class="snack-items">
-            ${section.items.map(item => `
-              <div class="snack-item">
-                ${item.image ? `<img src="${item.image}" alt="${item.name}" class="snack-item-img">` : ''}
-                <div class="snack-item-content">
-                  <div class="snack-item-name">${item.name}</div>
-                </div>
               </div>
             `).join('')}
           </div>
