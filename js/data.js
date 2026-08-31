@@ -364,7 +364,7 @@ const SNACKS = {
       name: "Запечённый батат с пармезаном",
       nameEn: "Sweet Potato Fries",
       price: 490,
-      image: "img/перекусы/Запеченный батат с пармезаном.png",
+      image: "img/перекусы/Запечённый батат с пармезаном.png",
       items: [
         { id: "batat-fries", name: "Батат запечённый с пармезаном", ingredients: "" }
       ]
