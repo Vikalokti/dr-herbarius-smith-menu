@@ -190,7 +190,7 @@ const App = {
     this.renderNav('home');
 
     const main = document.getElementById('main-content');
-    const categoriesHTML = CATEGORIES.filter(cat => cat.id !== 'boosters').map(cat => {
+    const categoriesHTML = CATEGORIES.filter(cat => cat.id !== 'boosters' && !cat.hidden).map(cat => {
       const count = DRINKS.filter(d => d.category === cat.id).length;
       if (cat.id === 'mono') {
         return `
@@ -330,7 +330,7 @@ const App = {
       return;
     }
 
-    const results = DRINKS.filter(d => {
+    const results = this.visibleDrinks().filter(d => {
       const searchable = [
         d.nameEn, d.nameRu, d.functionRu, d.functionShort,
         d.ingredients || '', d.flavorProfile || '',
@@ -372,7 +372,7 @@ const App = {
     this.currentPage = 'category';
     this.currentCategory = catId;
     const cat = CATEGORIES.find(c => c.id === catId);
-    if (!cat) { location.hash = '#home'; return; }
+    if (!cat || cat.hidden) { location.hash = '#home'; return; }
 
     this.renderHeader('back', cat.nameRu);
     this.renderNav('home');
@@ -728,6 +728,7 @@ const App = {
     if (!drink) { location.hash = '#home'; return; }
 
     const cat = CATEGORIES.find(c => c.id === drink.category);
+    if (!cat || cat.hidden) { location.hash = '#home'; return; }
     this.renderHeader('back', drink.nameRu);
     this.renderNav('home');
 
@@ -1044,7 +1045,7 @@ const App = {
     this.renderNav('favorites');
 
     const main = document.getElementById('main-content');
-    const favDrinks = DRINKS.filter(d => this.favorites.includes(d.id));
+    const favDrinks = this.visibleDrinks().filter(d => this.favorites.includes(d.id));
 
     if (favDrinks.length === 0) {
       main.innerHTML = `
@@ -1078,6 +1079,12 @@ const App = {
   // ========================================
   // UTILS
   // ========================================
+  // Напитки из скрытых категорий не показываем в поиске и избранном
+  visibleDrinks() {
+    const hidden = CATEGORIES.filter(c => c.hidden).map(c => c.id);
+    return DRINKS.filter(d => !hidden.includes(d.category));
+  },
+
   getComponentColor(c) {
     const cl = c.toLowerCase();
     const vitamins = ['A','C','D','E','PP','B1','B2','B3','B5','B6','B9','B12'];

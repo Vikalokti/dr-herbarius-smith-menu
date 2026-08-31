@@ -61,6 +61,7 @@ const CATEGORIES = [
   },
   {
     id: "green",
+    hidden: true,
     nameEn: "Green Drinks",
     nameRu: "Зелёные напитки",
     subtitle: "The Green State",
@@ -84,7 +85,32 @@ const CATEGORIES = [
     icon: "star"
   },
   {
+    id: "microbiota",
+    nameEn: "Microbiome Drinks",
+    nameRu: "Напитки для микробиоты",
+    subtitle: "The Microbiome State",
+    description: "Для внутреннего баланса, поддержания здоровой микробиоты, гармоничной работы пищеварительной системы.",
+    descriptionEn: "For inner balance, a healthy microbiome and harmonious digestion",
+    color: "#9B615A",
+    colorLight: "#F5EFEE",
+    colorMid: "#C99A90",
+    icon: "droplet"
+  },
+  {
+    id: "tea-coffee",
+    nameEn: "Tea & Coffee Drinks",
+    nameRu: "Чайные и кофейные напитки",
+    subtitle: "The Focus State",
+    description: "Поддерживают концентрацию, мягко тонизируют и восполняют энергию.",
+    descriptionEn: "Support focus, tonify gently and replenish energy",
+    color: "#5A4632",
+    colorLight: "#F4EEE6",
+    colorMid: "#B79C7C",
+    icon: "leaf"
+  },
+  {
     id: "fiber",
+    hidden: true,
     nameEn: "Fiber Tonics",
     nameRu: "Тоники с клетчаткой",
     subtitle: "The Fiber State",
@@ -97,6 +123,7 @@ const CATEGORIES = [
   },
   {
     id: "fermented",
+    hidden: true,
     nameEn: "Fermented & Prebio",
     nameRu: "Ферментированные пребиотические напитки",
     subtitle: "The Gut State",
@@ -253,11 +280,10 @@ const SNACKS = {
       price: 110,
       priceNote: "",
       items: [
-        { id: "anchan", name: "Анчан", nameEn: "Blue Anchan", ingredients: "База-основа, анчан порошок", image: "img/перекусы/image 164.png" },
-        { id: "raspberry", name: "Малина", nameEn: "Raspberry", ingredients: "База-основа, лиофилизированный порошок малины", image: "img/перекусы/image 165.png" },
-        { id: "carob-cacao", name: "Кероб, какао", nameEn: "Dark Carob Cacao", ingredients: "База-основа, кэроб, какао", image: "img/перекусы/image 166.png" },
-        { id: "green-matcha", name: "Зелёная матча", nameEn: "Green Matcha", ingredients: "База-основа, зелёная матча", image: "img/перекусы/image 167.png" },
-        { id: "pitahaya-matcha", name: "Матча питахайя", nameEn: "Pitahaya Matcha", ingredients: "База-основа, матча питахайя", image: "img/перекусы/image 168.png" }
+        { id: "strawberry", name: "Клубника", nameEn: "Strawberry", ingredients: "База-основа, сублимированная клубника", image: "img/Клубника.png" },
+        { id: "passionfruit", name: "Маракуйя", nameEn: "Passionfruit", ingredients: "База-основа, сублимированная маракуйя", image: "img/Маракуйя.png" },
+        { id: "raspberry", name: "Малина", nameEn: "Raspberry", ingredients: "База-основа, сублимированная малина", image: "img/Малина.png" },
+        { id: "carob-cacao", name: "Кероб, какао", nameEn: "Dark Carob Cacao", ingredients: "База-основа, кэроб, какао", image: "img/Кероб, какао.png" }
       ]
     },
     {
@@ -270,27 +296,6 @@ const SNACKS = {
         { id: "lemon-cranberry-cookie", name: "Клюква — лимон", nameEn: "Lemon Cranberry", ingredients: "База-основа, гречневая мука, овсяная мука, клюква, лимонная цедра, лимонный сок, кокосовое масло, соль", image: "img/перекусы/image 159.png" },
         { id: "mango-coconut-cookie", name: "Манго — кокос", nameEn: "Coconut Mango", ingredients: "База-основа, кокосовая мука, амарантовая мука, манго порошок, кусочки манго, кокосовая стружка, кокосовое масло, соль", image: "img/перекусы/image 158.png" }
       ]
-    },
-    {
-      id: "yogurt",
-      name: "Йогурт-конструктор",
-      nameEn: "Yogurt Constructor",
-      price: 390,
-      image: "img/перекусы/image 179.png",
-      constructor: {
-        bases: ["100% Натуральный свежий йогурт из молока и закваски"],
-        dryAddons: [
-          { name: "Микс орехов", image: "img/перекусы/image 160-1.png" },
-          { name: "Гранола ягодная", image: "img/перекусы/image 2.png" },
-          { name: "Гранола шоколадная", image: "img/перекусы/image 3.png" },
-          { name: "Овсяные хлопья", image: "img/перекусы/image 4.png" }
-        ],
-        syrups: ["Мёд", "Сироп агавы", "Сироп топинамбура", "Сироп ягодный или фруктовый"],
-        purees: [
-          { name: "Ягодное", image: "img/перекусы/image 160-2.png" },
-          { name: "Фруктовое", image: "img/перекусы/image 177.png" }
-        ]
-      }
     },
     {
       id: "assorted-cups",
@@ -334,13 +339,6 @@ const SNACKS = {
       nameEn: "Desserts",
       isSectionTitle: true,
       items: [
-        {
-          id: "banana-choc-cake",
-          name: "Кекс банан-шоколад",
-          price: 290,
-          ingredients: "Бананы свежие, шоколад, изюм, сироп топинамбура, овсян. молоко, грецкие орехи",
-          image: "img/перекусы/Кекс банан-шоколад.png"
-        },
         {
           id: "tartlet-caramel-nuts",
           name: "Тарталетка «Орехи в соленой карамели»",
@@ -414,8 +412,8 @@ const DRINKS = [
     nameRu: "Ягодный витамин",
     category: "vitamins",
     functionShort: "Comprehensive Vitamin Support",
-    functionRu: "Малина, смородина и морошка — концентрат полифенолов и природной защиты клеток",
-    ingredients: "Малина, мякоть чёрной смородины, мякоть морошки, мякоть папайи, сироп бузины, сироп топинамбура, сироп малины, смородиновая вода",
+    functionRu: "Малина, смородина и папайя — концентрат полифенолов и природной защиты клеток",
+    ingredients: "Малина, мякоть чёрной смородины, мякоть папайи, сироп бузины, сироп топинамбура, сироп малины, смородиновая вода",
     activeComponents: ["Антоцианы", "Полифенолы", "K", "Природные антиоксиданты", "Vit C"],
     volume: "450 мл",
     price: 790,
@@ -689,7 +687,7 @@ const DRINKS = [
     fruitBase: [
       { name: "Мякоть юдзу", effect: "Яркая цитрусовая свежесть и витаминная поддержка." },
       { name: "Мякоть ревеня", effect: "Создаёт яркую фруктовую кислотность." },
-      { name: "Мякоть морошки", effect: "Источник антиоксидантов и северной ягодной глубины." },
+      { name: "Мякоть папайи", effect: "Источник антиоксидантов и фруктовых ферментов." },
       { name: "Фреш апельсина", effect: "Добавляет свежесть и витаминную поддержку." },
       { name: "Сироп агавы", effect: "Мягкая натуральная сладость." },
       { name: "Солевой раствор 0,9%", effect: "Балансирует вкус и поддерживает электролитный баланс." }
@@ -1507,7 +1505,7 @@ const DRINKS = [
     image: "img/Inner Flow.png",
     nameEn: "Inner Flow",
     nameRu: "Внутренний поток",
-    category: "green",
+    category: "microbiota",
     functionShort: "Lymphatic Flow & Metabolic Detox Support",
     functionRu: "Лимфатический дренаж и метаболическая детокс-поддержка",
     description: "Этот функциональный напиток разработан для поддержки естественных процессов очищения организма через активацию лимфатической системы, улучшение метаболического обмена и мягкую детокс-поддержку печени и кишечника.\nОсновой напитка является берёзовый сок — природный источник органических кислот, минералов и биологически активных соединений, традиционно используемый в фитотерапии для мягкой детокс-поддержки организма и улучшения лимфатического обмена.",
@@ -1835,7 +1833,7 @@ const DRINKS = [
     image: "img/Fiber Comfort.png",
     nameEn: "Fiber Comfort",
     nameRu: "Файбер Комфорт",
-    category: "fiber",
+    category: "microbiota",
     functionShort: "Digestive Regulation & Gut Motility Support",
     functionRu: "Регуляция пищеварения и поддержка кишечной моторики",
     description: "Этот функциональный напиток создан для мягкой поддержки пищеварения, нормализации кишечной моторики и формирования здоровой микробиоты. Его формула объединяет растворимые пищевые волокна, пребиотические соединения и растительные экстракты, которые помогают регулировать работу кишечника и поддерживать метаболический баланс.\nFiber Comfort поддерживает естественную работу кишечника, создаёт ощущение лёгкости и помогает организму поддерживать внутренний баланс.",
@@ -2085,7 +2083,7 @@ const DRINKS = [
     image: "img/Immunoferm.png",
     nameEn: "Immunoferm",
     nameRu: "Иммуноферм",
-    category: "fermented",
+    category: "microbiota",
     functionShort: "Immune & Microbiome Support",
     functionRu: "Поддержка иммунитета и микробиоты кишечника",
     description: "Это ферментированный функциональный напиток, созданный для поддержки иммунной системы, восстановления микробиоты кишечника и усиления антиоксидантной защиты организма. Его основа — светлая комбуча, дополненная пробиотическими культурами, пребиотическими волокнами и природными источниками витамина C.\nКомбуча содержит органические кислоты и ферментированные соединения, которые поддерживают пищеварение и создают благоприятную среду для микрофлоры кишечника.",
@@ -2611,5 +2609,160 @@ const DRINKS = [
     temperature: ["17-24°C", "6-10°C"],
     whenToDrink: "Утро / поддержка работы печени / после тяжёлой пищи",
     doctorNote: "«Когда печень работает свободно, организм быстрее возвращает себе лёгкость и энергию.»"
+  },
+
+  // =====================
+  // TEA & COFFEE DRINKS
+  // =====================
+  {
+    id: "cold-brew-coffee",
+    image: "img/Кофе Колд Брю.png",
+    nameEn: "Cold Brew Coffee",
+    nameRu: "Кофе Колд Брю",
+    category: "tea-coffee",
+    functionShort: "Gentle Tonic & Mental Clarity",
+    functionRu: "Мягко тонизирует, помогает сохранять концентрацию и поддерживает ясность мышления",
+    fruitBase: [
+      { name: "100% арабика из Эфиопии" },
+      { name: "Сироп лесной орех" },
+      { name: "Банан" }
+    ],
+    price: 390,
+    temperature: ["65-70°C", "17-24°C", "6-10°C"],
+    whenToDrink: "В течение дня"
+  },
+  {
+    id: "bumble-coffee",
+    image: "img/Кофе Бамбл.png",
+    nameEn: "Bumble Coffee",
+    nameRu: "Кофе Бамбл",
+    category: "tea-coffee",
+    functionShort: "Gentle Tonic & Mental Clarity",
+    functionRu: "Мягко тонизирует, помогает сохранять концентрацию и поддерживает ясность мышления",
+    fruitBase: [
+      { name: "Кофе Колд Брю" },
+      { name: "Фреш апельсина" },
+      { name: "Сироп на выбор" }
+    ],
+    price: 390,
+    temperature: ["65-70°C", "17-24°C", "6-10°C"],
+    whenToDrink: "В течение дня"
+  },
+  {
+    id: "herbal-tonic-coffee",
+    image: "img/Кофе Хербл Тоник.png",
+    nameEn: "Herbal Tonic Coffee",
+    nameRu: "Кофе Хербл Тоник",
+    category: "tea-coffee",
+    functionShort: "Gentle Tonic & Mental Clarity",
+    functionRu: "Мягко тонизирует, помогает сохранять концентрацию и поддерживает ясность мышления",
+    fruitBase: [
+      { name: "Кофе Колд Брю" },
+      { name: "Тоник" },
+      { name: "Настой гибискуса" }
+    ],
+    price: 390,
+    temperature: ["65-70°C", "17-24°C", "6-10°C"],
+    whenToDrink: "В течение дня"
+  },
+  {
+    id: "milk-coffee",
+    image: "img/Кофе Милк.png",
+    nameEn: "Milk Coffee",
+    nameRu: "Кофе Милк",
+    category: "tea-coffee",
+    functionShort: "Gentle Tonic & Mental Clarity",
+    functionRu: "Мягко тонизирует, помогает сохранять концентрацию и поддерживает ясность мышления",
+    fruitBase: [
+      { name: "Кофе Колд Брю" },
+      { name: "Молоко на выбор (банановое, миндальное, кокосовое)" }
+    ],
+    price: 390,
+    temperature: ["65-70°C", "17-24°C", "6-10°C"],
+    whenToDrink: "В течение дня"
+  },
+  {
+    id: "bumble-matcha",
+    image: "img/Матча Бамбл.png",
+    nameEn: "Bumble Matcha",
+    nameRu: "Матча Бамбл",
+    category: "tea-coffee",
+    functionShort: "Sustained Energy & Focus",
+    functionRu: "Поддерживает концентрацию, мягко тонизирует и обеспечивает длительное ощущение энергии",
+    fruitBase: [
+      { name: "Матча" },
+      { name: "Фреш апельсина" },
+      { name: "Сироп на выбор" }
+    ],
+    price: 390,
+    temperature: ["65-70°C", "17-24°C", "6-10°C"],
+    whenToDrink: "В течение дня"
+  },
+  {
+    id: "herbal-tonic-matcha",
+    image: "img/Матча Хербл Тоник.png",
+    nameEn: "Herbal Tonic Matcha",
+    nameRu: "Матча Хербл Тоник",
+    category: "tea-coffee",
+    functionShort: "Sustained Energy & Focus",
+    functionRu: "Поддерживает концентрацию, мягко тонизирует и обеспечивает длительное ощущение энергии",
+    fruitBase: [
+      { name: "Матча" },
+      { name: "Тоник" },
+      { name: "Настой гибискуса" }
+    ],
+    price: 390,
+    temperature: ["65-70°C", "17-24°C", "6-10°C"],
+    whenToDrink: "В течение дня"
+  },
+  {
+    id: "matcha-milk",
+    image: "img/Матча Милк.png",
+    nameEn: "Matcha Milk",
+    nameRu: "Матча Милк",
+    category: "tea-coffee",
+    functionShort: "Sustained Energy & Focus",
+    functionRu: "Поддерживает концентрацию, мягко тонизирует и обеспечивает длительное ощущение энергии",
+    fruitBase: [
+      { name: "Матча" },
+      { name: "Молоко на выбор (банановое, миндальное, кокосовое)" }
+    ],
+    price: 390,
+    temperature: ["65-70°C", "17-24°C", "6-10°C"],
+    whenToDrink: "В течение дня"
+  },
+  {
+    id: "thai-tea",
+    image: "img/Тайский чай.png",
+    nameEn: "Thai Tea",
+    nameRu: "Тайский чай",
+    category: "tea-coffee",
+    functionShort: "Energy & Emotional Comfort",
+    functionRu: "Наполняет энергией, помогает сохранять бодрость и эмоциональный комфорт",
+    fruitBase: [
+      { name: "Чёрный тайский чай" },
+      { name: "Молоко сгущённое" },
+      { name: "Молоко концентрированное" }
+    ],
+    price: 390,
+    temperature: ["65-70°C", "17-24°C", "6-10°C"],
+    whenToDrink: "В течение дня"
+  },
+  {
+    id: "local-tea",
+    image: "img/Чай Локал.png",
+    nameEn: "Local Tea",
+    nameRu: "Чай Локал",
+    category: "tea-coffee",
+    functionShort: "Refreshment & Hydration",
+    functionRu: "Освежает, поддерживает водный баланс и сохраняет ощущение лёгкости",
+    fruitBase: [
+      { name: "Чёрный тайский чай" },
+      { name: "Молоко сгущённое" },
+      { name: "Молоко концентрированное" }
+    ],
+    price: 390,
+    temperature: ["65-70°C", "17-24°C", "6-10°C"],
+    whenToDrink: "В течение дня"
   }
 ];
