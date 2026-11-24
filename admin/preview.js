@@ -15,12 +15,17 @@ var categoryStyles = {
   oxygen: { name: 'Кислородные коктейли', color: '#248386', light: '#E0F2F1' },
 };
 
-var previewCategoriesPromise = fetch('/data/catalog.json', { cache: 'no-cache' })
+var previewCatalogPromise = fetch('/data/catalog.json', { cache: 'no-cache' })
   .then(function (response) { return response.ok ? response.json() : {}; })
+  .catch(function () { return {}; });
+
+var previewCategoriesPromise = previewCatalogPromise
   .then(function (catalog) {
     return (catalog.CATEGORIES || []).reduce(function (categories, category) {
       categories[category.id] = {
         name: category.nameRu,
+        nameEn: category.nameEn,
+        description: category.description,
         color: category.color,
         light: category.colorLight,
       };
@@ -28,6 +33,241 @@ var previewCategoriesPromise = fetch('/data/catalog.json', { cache: 'no-cache' }
     }, {});
   })
   .catch(function () { return {}; });
+
+function previewImage(context, path, alt, className) {
+  if (!path) return null;
+  var asset = context.props.getAsset(path);
+  return h('img', {
+    src: asset ? asset.toString() : path,
+    alt: alt || '',
+    className: className || '',
+  });
+}
+
+function PreviewPageHeader(eyebrow, title, subtitle) {
+  return h('header', { className: 'cms-page-header' },
+    h('div', { className: 'cms-page-eyebrow' }, eyebrow),
+    h('h1', { className: 'cms-page-title' }, title),
+    subtitle ? h('p', { className: 'cms-page-subtitle' }, subtitle) : null
+  );
+}
+
+var BoosterPreview = createClass({
+  getInitialState: function () {
+    return { catalog: {} };
+  },
+  componentDidMount: function () {
+    var component = this;
+    previewCatalogPromise.then(function (catalog) {
+      component.setState({ catalog: catalog || {} });
+    });
+  },
+  render: function () {
+    var data = this.props.entry.get('data').toJS();
+    var catalog = this.state.catalog || {};
+    var categories = Array.isArray(catalog.CATEGORIES) ? catalog.CATEGORIES : [];
+    var category = categories.find(function (item) { return item.id === 'boosters'; }) || {};
+    var boosters = Array.isArray(catalog.BOOSTERS) ? catalog.BOOSTERS.slice() : [];
+    var currentIndex = boosters.findIndex(function (item) { return item.id === data.id; });
+    if (currentIndex >= 0) boosters[currentIndex] = data;
+    else boosters.push(data);
+    return h('div', { className: 'drink-preview cms-collection-preview' },
+      PreviewPageHeader(category.nameEn || 'Boosters', category.nameRu || 'Бустеры', category.description || ''),
+      data.hidden ? h('div', { className: 'cms-preview-status' }, 'Эта позиция скрыта и не показывается на странице бустеров.') : null,
+      h('div', { className: 'boosters-section' },
+        h('div', { className: 'boosters-grid' }, boosters.filter(function (booster) { return !booster.hidden; }).map(function (booster, index) {
+          var name = booster.activeIngredients || 'Активные ингредиенты';
+          name = name.charAt(0).toUpperCase() + name.slice(1);
+          return h('article', { className: 'booster-card', key: booster.id || index, style: { background: booster.bg || '#F5F0E8' } },
+            h('div', { className: 'booster-card-text' },
+              h('div', { className: 'booster-name', style: { color: booster.color || '#265B2D' } }, name),
+              h('div', { className: 'booster-function', style: { color: booster.color || '#265B2D' } }, 'Функция: ' + (booster.function || '')),
+              h('div', { className: 'booster-price', style: { color: booster.color || '#265B2D' } }, (booster.price || '') + ' ₽')
+            )
+          );
+        }))
+      )
+    );
+  },
+});
+
+function SnackItemPreview(item, context, key) {
+  return h('article', { className: 'snack-item', key: key },
+    previewImage(context, item.image, item.name, 'snack-item-img'),
+    h('div', { className: 'snack-item-content' },
+      h('div', { className: 'snack-item-name' }, item.name || 'Название позиции'),
+      item.nameEn ? h('div', { className: 'snack-item-en' }, item.nameEn) : null,
+      item.ingredients ? h('div', { className: 'snack-item-ingredients' }, item.ingredients) : null
+    ),
+    item.price ? h('div', { className: 'snack-item-price' }, item.price + ' ₽') : null
+  );
+}
+
+function SnackSectionPreview(section, context) {
+  var items = Array.isArray(section.items) ? section.items : [];
+  var hasSectionPrice = !!section.price && items.every(function (item) { return !item.price; });
+  if (section.id === 'desserts') {
+    return h('section', { className: 'snack-section snack-section--desserts', key: section.id },
+      h('div', { className: 'snack-desserts-title' }, section.name || 'Десерты'),
+      h('div', { className: 'snack-items' }, items.map(function (item, index) {
+        return SnackItemPreview(item, context, index);
+      }))
+    );
+  }
+
+  if (section.id === 'batat' || section.id === 'pastila') {
+    var item = items[0] || {};
+    return h('section', { className: 'snack-section snack-section--single', key: section.id },
+      previewImage(context, section.image || item.image, section.name, 'snack-single-img'),
+      h('div', { className: 'snack-section-single-info' },
+        h('div', {},
+          section.nameEn ? h('div', { className: 'snack-section-en' }, section.nameEn) : null,
+          h('div', { className: 'snack-section-name' }, section.name || 'Название раздела'),
+          item.name && item.name !== section.name ? h('div', { className: 'snack-single-ingredients' }, item.name) : null,
+          item.ingredients ? h('div', { className: 'snack-single-ingredients' }, item.ingredients) : null
+        ),
+        section.price ? h('div', { className: 'snack-section-price' }, section.price + ' ₽') : null
+      )
+    );
+  }
+
+  return h('section', { className: 'snack-section', key: section.id || section.name },
+    h('div', { className: 'snack-section-header' },
+      h('div', {},
+        section.nameEn ? h('div', { className: 'snack-section-en' }, section.nameEn) : null,
+        h('div', { className: 'snack-section-name' }, section.name || 'Название раздела')
+      ),
+      h('div', { className: 'snack-preview-price-column' },
+        hasSectionPrice ? h('div', { className: 'snack-section-price' }, section.price + ' ₽') : null,
+        section.priceNote ? h('div', { className: 'snack-price-note' }, section.priceNote) : null
+      )
+    ),
+    section.image ? previewImage(context, section.image, section.name, 'snack-section-hero-img') : null,
+    items.length ? h('div', { className: 'snack-items' }, items.map(function (item, index) {
+      return SnackItemPreview(item, context, index);
+    })) : h('p', { className: 'snack-preview-empty' }, 'Добавьте позиции в этот раздел.')
+  );
+}
+
+var SnacksPreview = createClass({
+  render: function () {
+    var data = this.props.entry.get('data').toJS();
+    var sections = Array.isArray(data.sections) ? data.sections : [];
+    return h('div', { className: 'drink-preview cms-collection-preview' },
+      PreviewPageHeader('Меню', 'Перекусы', 'Так раздел будет выглядеть на сайте'),
+      data.richBase ? h('section', { className: 'snack-preview-base' },
+        h('div', { className: 'snack-preview-base-name' }, data.richBase.name || 'Название основы'),
+        data.richBase.nameEn ? h('div', { className: 'snack-section-en' }, data.richBase.nameEn) : null,
+        data.richBase.ingredients ? h('p', { className: 'snack-item-ingredients' }, data.richBase.ingredients) : null
+      ) : null,
+      sections.map(function (section) { return SnackSectionPreview(section, this); }, this)
+    );
+  },
+});
+
+var MonoPreview = createClass({
+  getInitialState: function () {
+    return { category: {} };
+  },
+  componentDidMount: function () {
+    var component = this;
+    previewCategoriesPromise.then(function (categories) {
+      component.setState({ category: categories.mono || {} });
+    });
+  },
+  render: function () {
+    var data = this.props.entry.get('data').toJS();
+    var herbs = Array.isArray(data.MONO_HERBS) ? data.MONO_HERBS : [];
+    var states = Array.isArray(data.MONO_BY_STATE) ? data.MONO_BY_STATE : [];
+    var category = this.state.category || {};
+    var accent = category.color || '#6B7B3A';
+    return h('div', { className: 'drink-preview cms-collection-preview' },
+      PreviewPageHeader(category.nameEn || 'Mono Herbs', category.nameRu || 'Моно растения', category.description || ''),
+      h('div', { className: 'mono-preview-guide' },
+        h('strong', {}, 'Собери свой настой'),
+        h('span', {}, '380 мл · заваривание 5 минут'),
+        h('span', {}, '1 компонент — точечное действие · 2–3 — баланс вкуса · 4 — сложный профиль')
+      ),
+      Array.isArray(data.MONO_BLENDS) && data.MONO_BLENDS.length
+        ? h('div', { className: 'cms-preview-info-note' }, 'Поле «Готовые купажи» сохраняется в редакторе, но сейчас не отображается на странице сайта.')
+        : null,
+      previewSection('Ингредиенты · ' + herbs.length + ' моно растений',
+        herbs.length ? h('div', { className: 'mono-herbs-list' }, herbs.map(function (herb, index) {
+          return h('article', { className: 'mono-herb-card', key: index },
+            h('div', { className: 'mono-herb-header' },
+              h('span', { className: 'mono-herb-name' }, herb.name || 'Название травы'),
+              herb.part ? h('span', { className: 'mono-herb-part' }, herb.part) : null,
+              herb.weight ? h('span', { className: 'mono-herb-weight' }, herb.weight) : null
+            ),
+            herb.source ? h('div', { className: 'mono-herb-source' }, herb.source) : null,
+            herb.effect ? h('div', { className: 'mono-herb-effect', style: { color: accent } }, herb.effect) : null
+          );
+        })) : h('p', { className: 'snack-preview-empty' }, 'Добавьте травы в список.')
+      ),
+      previewSection('Выбор по состоянию',
+        states.length ? h('div', { className: 'mono-preview-grid' }, states.map(function (item, index) {
+          return h('article', { className: 'mono-preview-state', key: index },
+            h('strong', { style: { color: accent } }, item.state || 'Состояние'),
+            h('span', {}, item.herbs || '')
+          );
+        })) : h('p', { className: 'snack-preview-empty' }, 'Добавьте варианты подбора.')
+      ),
+      h('div', { className: 'mono-preview-guide mono-preview-guide--extras' },
+        h('strong', {}, 'Можно добавить'),
+        h('span', {}, 'Горный мёд · сироп топинамбура · сок лимона')
+      ),
+      h('p', { className: 'mono-preview-advice' }, 'Сильные компоненты (саган-дайля, лимонник, имбирь) лучше использовать как акцент. Если сомневаетесь — бариста поможет собрать состав под ваш запрос.')
+    );
+  },
+});
+
+var CategoriesPreview = createClass({
+  getInitialState: function () {
+    return { catalog: {} };
+  },
+  componentDidMount: function () {
+    var component = this;
+    previewCatalogPromise.then(function (catalog) {
+      component.setState({ catalog: catalog || {} });
+    });
+  },
+  render: function () {
+    var data = this.props.entry.get('data').toJS();
+    var categories = Array.isArray(data.CATEGORIES) ? data.CATEGORIES : [];
+    var catalog = this.state.catalog || {};
+    var drinks = Array.isArray(catalog.DRINKS) ? catalog.DRINKS : [];
+    var monoCount = Array.isArray(catalog.MONO_HERBS) ? catalog.MONO_HERBS.length : 0;
+    var visible = categories.filter(function (category) { return category.id !== 'boosters' && !category.hidden; });
+    var hidden = categories.filter(function (category) { return category.id !== 'boosters' && category.hidden; });
+    function categoryCard(category, index, isHidden) {
+      var count = category.id === 'mono'
+        ? monoCount + ' ингредиентов'
+        : category.id === 'snacks'
+          ? ''
+          : drinks.filter(function (drink) { return drink.category === category.id && !drink.hidden; }).length + ' напитков';
+      return h('article', {
+        className: 'category-preview-card' + (isHidden ? ' category-preview-card--hidden' : ''),
+        key: category.id || index,
+        style: { background: category.colorLight || '#EFF6EE', color: category.color || '#265B2D' },
+      },
+        isHidden ? h('span', { className: 'category-preview-hidden-badge' }, 'Скрыта на сайте') : null,
+        category.nameEn ? h('div', { className: 'category-preview-en' }, category.nameEn) : null,
+        h('h2', { className: 'category-preview-name' }, category.nameRu || 'Название категории'),
+        category.description ? h('p', { className: 'category-preview-description' }, category.description) : null,
+        count ? h('div', { className: 'category-preview-count' }, count) : null
+      );
+    }
+    return h('div', { className: 'drink-preview cms-collection-preview' },
+      PreviewPageHeader('Главная страница', 'Функциональные напитки', 'Так карточки категорий будут выглядеть на главной'),
+      h('div', { className: 'category-preview-grid' }, visible.map(function (category, index) {
+        return categoryCard(category, index, false);
+      })),
+      hidden.length ? previewSection('Скрытые категории · не появятся на главной',
+        h('div', { className: 'category-preview-grid' }, hidden.map(function (category, index) { return categoryCard(category, index, true); }))
+      ) : null,
+    );
+  },
+});
 
 function previewSection(title, content) {
   if (!content) return null;
@@ -159,3 +399,7 @@ var DrinkPreview = createClass({
 CMS.registerPreviewStyle('/css/styles.css');
 CMS.registerPreviewStyle('/admin/preview.css');
 CMS.registerPreviewTemplate('drinks', DrinkPreview);
+CMS.registerPreviewTemplate('boosters', BoosterPreview);
+CMS.registerPreviewTemplate('snacks', SnacksPreview);
+CMS.registerPreviewTemplate('mono', MonoPreview);
+CMS.registerPreviewTemplate('categories', CategoriesPreview);

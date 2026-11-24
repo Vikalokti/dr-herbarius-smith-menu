@@ -137,6 +137,179 @@ body {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.045);
 }
 
+.cms-page-header {
+  margin: 0 0 16px;
+  padding: 18px 20px;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.045);
+}
+
+.cms-page-eyebrow {
+  margin-bottom: 5px;
+  color: #899187;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.cms-page-title {
+  margin: 0;
+  color: #265b2d;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.cms-page-subtitle {
+  margin: 6px 0 0;
+  color: #6a7568;
+  font-size: 13px;
+}
+
+.cms-preview-status,
+.cms-preview-info-note {
+  margin: 0 0 12px;
+  padding: 10px 13px;
+  border-radius: 11px;
+  background: #fff7df;
+  color: #75521a;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.snack-preview-base {
+  margin-bottom: 14px;
+  padding: 16px 18px;
+  border-radius: 16px;
+  background: #ffe381;
+  color: #5c4a1e;
+}
+
+.snack-preview-base-name {
+  margin-bottom: 6px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.snack-preview-base .snack-section-en { color: #8a7744; }
+.snack-preview-base .snack-item-ingredients { color: #5c4a1e; }
+.snack-preview-price-column { text-align: right; }
+.snack-preview-empty { margin: 12px 0 2px; color: #899187; font-size: 12px; }
+
+.mono-preview-guide {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 14px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: #82916a;
+  color: #fff;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.mono-preview-guide--extras {
+  margin: 16px 0 10px;
+  background: #ffe381;
+  color: #5c4a1e;
+}
+
+.mono-preview-advice {
+  margin: 0;
+  padding: 13px 15px;
+  border: 1px solid #e5e9df;
+  border-radius: 13px;
+  background: #fff;
+  color: #6b7568;
+  font-size: 12px;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.mono-preview-guide strong {
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.mono-preview-grid { display: grid; gap: 8px; }
+.mono-preview-blend,
+.mono-preview-state {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: #fafaf5;
+  color: #5a6550;
+  font-size: 13px;
+  line-height: 1.45;
+}
+.mono-preview-blend strong,
+.mono-preview-state strong { font-size: 14px; }
+
+.category-preview-grid { display: grid; gap: 10px; }
+
+.category-preview-card {
+  position: relative;
+  min-height: 112px;
+  padding: 15px 18px;
+  overflow: hidden;
+  border-radius: 17px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.045);
+}
+
+.category-preview-en {
+  margin-bottom: 4px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  opacity: 0.62;
+  text-transform: uppercase;
+}
+
+.category-preview-name {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.category-preview-description {
+  margin: 6px 0 0;
+  font-size: 12px;
+  line-height: 1.45;
+  opacity: 0.78;
+}
+
+.category-preview-count {
+  margin-top: 8px;
+  font-size: 10px;
+  font-weight: 600;
+  opacity: 0.65;
+}
+
+.category-preview-card--hidden {
+  border: 1px dashed rgba(80, 85, 80, 0.35);
+  filter: saturate(0.45);
+}
+
+.category-preview-hidden-badge {
+  display: inline-block;
+  margin-bottom: 5px;
+  padding: 3px 7px;
+  border-radius: 999px;
+  background: rgba(70, 70, 70, 0.1);
+  color: #5c625b;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
 .drink-preview-section-title {
   margin: 0 0 9px;
   color: #265b2d;
