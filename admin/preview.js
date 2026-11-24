@@ -15,6 +15,20 @@ var categoryStyles = {
   oxygen: { name: 'Кислородные коктейли', color: '#248386', light: '#E0F2F1' },
 };
 
+var previewCategoriesPromise = fetch('/data/catalog.json', { cache: 'no-cache' })
+  .then(function (response) { return response.ok ? response.json() : {}; })
+  .then(function (catalog) {
+    return (catalog.CATEGORIES || []).reduce(function (categories, category) {
+      categories[category.id] = {
+        name: category.nameRu,
+        color: category.color,
+        light: category.colorLight,
+      };
+      return categories;
+    }, {});
+  })
+  .catch(function () { return {}; });
+
 function previewSection(title, content) {
   if (!content) return null;
   return h('section', { className: 'drink-preview-section' },
@@ -75,9 +89,20 @@ function previewTimeline(values, category) {
 }
 
 var DrinkPreview = createClass({
+  getInitialState: function () {
+    return { catalogCategories: {} };
+  },
+  componentDidMount: function () {
+    var component = this;
+    previewCategoriesPromise.then(function (categories) {
+      component.setState({ catalogCategories: categories });
+    });
+  },
   render: function () {
     var data = this.props.entry.get('data').toJS();
-    var category = categoryStyles[data.category] || categoryStyles.vitamins;
+    var category = this.state.catalogCategories[data.category] || categoryStyles[data.category] || {
+      name: 'Категория', color: '#265B2D', light: '#EFF6EE',
+    };
     var image = data.image ? this.props.getAsset(data.image) : null;
     var imageUrl = image ? image.toString() : '';
     var children = [];

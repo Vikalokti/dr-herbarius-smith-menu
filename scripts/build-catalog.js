@@ -28,6 +28,19 @@ const catalog = {
   ...readJson('mono.json'),
 };
 
+const categoryIds = new Set();
+for (const category of catalog.CATEGORIES || []) {
+  if (!category.id) throw new Error(`У категории «${category.nameRu || 'без названия'}» не указан ID.`);
+  if (categoryIds.has(category.id)) throw new Error(`Повторяется ID категории: ${category.id}`);
+  categoryIds.add(category.id);
+}
+
+const drinksWithoutCategory = catalog.DRINKS.filter((drink) => !categoryIds.has(drink.category));
+if (drinksWithoutCategory.length) {
+  const list = drinksWithoutCategory.map((drink) => `${drink.nameRu} (${drink.category || 'категория не выбрана'})`).join(', ');
+  throw new Error(`Перед удалением категории перенесите её напитки в другую категорию: ${list}`);
+}
+
 const outputDirectory = path.join(root, 'data');
 fs.mkdirSync(outputDirectory, { recursive: true });
 fs.writeFileSync(

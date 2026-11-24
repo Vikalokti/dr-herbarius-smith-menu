@@ -9,6 +9,38 @@ publish_mode: simple
 locale: ru
 
 collections:
+  - name: categories
+    label: Категории меню
+    files:
+      - name: categories
+        label: Список категорий
+        file: content/catalog-base.json
+        fields:
+          - label: Категории
+            name: CATEGORIES
+            widget: list
+            label_singular: Категория
+            collapsed: true
+            minimize_collapsed: true
+            summary: "{{fields.nameRu}}"
+            hint: Порядок в этом списке определяет порядок категорий на главной. Перед удалением категории перенесите её напитки в другую категорию.
+            fields:
+              - { label: ID, name: id, widget: uuid }
+              - { label: Название на русском, name: nameRu, widget: string }
+              - { label: Название на английском, name: nameEn, widget: string, required: false }
+              - { label: Подзаголовок, name: subtitle, widget: string, required: false }
+              - { label: Описание на русском, name: description, widget: text }
+              - { label: Описание на английском, name: descriptionEn, widget: text, required: false }
+              - { label: Основной цвет, name: color, widget: color, default: "#265B2D" }
+              - { label: Светлый цвет фона, name: colorLight, widget: color, default: "#EFF6EE" }
+              - { label: Дополнительный цвет, name: colorMid, widget: color, default: "#7B9B76" }
+              - label: Иконка
+                name: icon
+                widget: select
+                default: leaf
+                options: [leaf, brain, bolt, star, droplet, flower, wind, plus]
+              - { label: Скрыть категорию, name: hidden, widget: boolean, required: false }
+
   - name: drinks
     label: Напитки
     label_singular: Напиток
@@ -27,22 +59,12 @@ collections:
       - { label: Название на английском, name: nameEn, widget: string, required: false }
       - label: Категория
         name: category
-        widget: select
-        options:
-          - { label: Витаминные миксы, value: vitamins }
-          - { label: Мышление и настроение, value: mind }
-          - { label: Спортивные напитки, value: sport }
-          - { label: Секретные эликсиры, value: elixirs }
-          - { label: Быстрый энергетический буст, value: energy-boost }
-          - { label: Зелёные напитки, value: green }
-          - { label: Бьюти-напитки, value: beauty }
-          - { label: Напитки для микробиоты, value: microbiota }
-          - { label: Чай и кофе, value: tea-coffee }
-          - { label: Тоники с клетчаткой, value: fiber }
-          - { label: Ферментированные напитки, value: fermented }
-          - { label: Фитокомплексы, value: herbal }
-          - { label: Детокс-воды, value: detox }
-          - { label: Кислородные коктейли, value: oxygen }
+        widget: relation
+        collection: categories
+        file: categories
+        search_fields: [CATEGORIES.*.nameRu, CATEGORIES.*.nameEn]
+        display_fields: [CATEGORIES.*.nameRu]
+        value_field: CATEGORIES.*.id
       - { label: Скрыть из меню, name: hidden, widget: boolean, required: false }
       - { label: Цена, name: price, widget: number, value_type: int }
       - { label: Фото, name: image, widget: image, required: false }
