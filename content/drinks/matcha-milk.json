@@ -1,0 +1,24 @@
+{
+  "id": "matcha-milk",
+  "image": "img/Напитки/Матча Латте.png",
+  "nameEn": "Matcha Latte",
+  "nameRu": "Матча Латте",
+  "category": "tea-coffee",
+  "functionShort": "Sustained Energy & Focus",
+  "functionRu": "Поддерживает концентрацию, мягко тонизирует и обеспечивает длительное ощущение энергии",
+  "fruitBase": [
+    {
+      "name": "Матча"
+    },
+    {
+      "name": "Молоко на выбор (банановое, миндальное, кокосовое)"
+    }
+  ],
+  "price": 390,
+  "temperature": [
+    "65-70°C",
+    "6-10°C"
+  ],
+  "whenToDrink": "В течение дня",
+  "sortOrder": 46
+}

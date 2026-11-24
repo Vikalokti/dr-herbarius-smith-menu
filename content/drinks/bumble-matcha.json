@@ -1,0 +1,27 @@
+{
+  "id": "bumble-matcha",
+  "image": "img/Напитки/Бамбл Матча.png",
+  "nameEn": "Bumble Matcha",
+  "nameRu": "Бамбл Матча",
+  "category": "tea-coffee",
+  "functionShort": "Sustained Energy & Focus",
+  "functionRu": "Поддерживает концентрацию, мягко тонизирует и обеспечивает длительное ощущение энергии",
+  "fruitBase": [
+    {
+      "name": "Матча"
+    },
+    {
+      "name": "Фреш апельсина"
+    },
+    {
+      "name": "Сироп на выбор"
+    }
+  ],
+  "price": 390,
+  "volume": "450 мл",
+  "temperature": [
+    "6-10°C"
+  ],
+  "whenToDrink": "В течение дня",
+  "sortOrder": 44
+}

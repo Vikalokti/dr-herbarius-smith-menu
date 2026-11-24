@@ -1,0 +1,27 @@
+{
+  "id": "thai-tea",
+  "image": "img/Напитки/Тайский чай.png",
+  "nameEn": "Thai Tea",
+  "nameRu": "Тайский чай",
+  "category": "tea-coffee",
+  "functionShort": "Energy & Emotional Comfort",
+  "functionRu": "Наполняет энергией, помогает сохранять бодрость и эмоциональный комфорт",
+  "fruitBase": [
+    {
+      "name": "Чёрный тайский чай"
+    },
+    {
+      "name": "Молоко сгущённое"
+    },
+    {
+      "name": "Молоко концентрированное"
+    }
+  ],
+  "price": 390,
+  "temperature": [
+    "65-70°C",
+    "6-10°C"
+  ],
+  "whenToDrink": "В течение дня",
+  "sortOrder": 47
+}

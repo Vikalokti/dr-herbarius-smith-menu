@@ -1,0 +1,27 @@
+{
+  "id": "berry-vita",
+  "image": "img/Напитки/Ягодный витамин.png",
+  "nameEn": "Berry Vita",
+  "nameRu": "Ягодный витамин",
+  "category": "vitamins",
+  "functionShort": "Comprehensive Vitamin Support",
+  "functionRu": "Малина, смородина и папайя — концентрат полифенолов и природной защиты клеток",
+  "ingredients": "Малина, мякоть чёрной смородины, мякоть папайи, сироп бузины, сироп топинамбура, сироп малины, смородиновая вода",
+  "activeComponents": [
+    "Антоцианы",
+    "Полифенолы",
+    "K",
+    "Природные антиоксиданты",
+    "Vit C"
+  ],
+  "volume": "450 мл",
+  "price": 790,
+  "calories": 260,
+  "temperature": [
+    "17-24°C",
+    "6-10°C"
+  ],
+  "whenToDrink": "В течение дня",
+  "hasBoosters": true,
+  "sortOrder": 1
+}

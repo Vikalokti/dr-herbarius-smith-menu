@@ -1,0 +1,24 @@
+{
+  "id": "milk-coffee",
+  "image": "img/Напитки/Колд Брю Латте.png",
+  "nameEn": "Cold Brew Latte",
+  "nameRu": "Колд Брю Латте",
+  "category": "tea-coffee",
+  "functionShort": "Gentle Tonic & Mental Clarity",
+  "functionRu": "Мягко тонизирует, помогает сохранять концентрацию и поддерживает ясность мышления",
+  "fruitBase": [
+    {
+      "name": "Колд Брю Кофе"
+    },
+    {
+      "name": "Молоко на выбор (банановое, миндальное, кокосовое)"
+    }
+  ],
+  "price": 390,
+  "temperature": [
+    "65-70°C",
+    "6-10°C"
+  ],
+  "whenToDrink": "В течение дня",
+  "sortOrder": 43
+}

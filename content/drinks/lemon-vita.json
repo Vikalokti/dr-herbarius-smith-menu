@@ -1,0 +1,26 @@
+{
+  "id": "lemon-vita",
+  "image": "img/Напитки/Лимонный витамин.png",
+  "nameEn": "Lemon Vita",
+  "nameRu": "Лимонный витамин",
+  "category": "vitamins",
+  "functionShort": "Comprehensive Vitamin Support",
+  "functionRu": "Каламанси, облепиха и кокосовая вода — свежесть цитруса и мягкая витаминная поддержка",
+  "ingredients": "Кокосовая вода, мякоть каламанси, фреш апельсина, сироп агавы, мякоть облепихи, цветочный мёд, огурец, гидролат цветов апельсина",
+  "activeComponents": [
+    "Природные антиоксиданты",
+    "K",
+    "Органические кислоты",
+    "Vit C"
+  ],
+  "volume": "450 мл",
+  "price": 790,
+  "calories": 210,
+  "temperature": [
+    "17-24°C",
+    "6-10°C"
+  ],
+  "whenToDrink": "В течение дня",
+  "hasBoosters": true,
+  "sortOrder": 3
+}

@@ -1,0 +1,12 @@
+{
+  "id": "sport-endurance",
+  "name": "Sport Endurance",
+  "nameRu": "Спорт Эндуранс",
+  "function": "поддержка выносливости",
+  "activeIngredients": "L-цитруллин",
+  "price": 50,
+  "image": "img/бустеры/Sport Endurance.png",
+  "bg": "#F5F0E8",
+  "color": "#5C4A1E",
+  "sortOrder": 2
+}

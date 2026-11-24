@@ -1,0 +1,27 @@
+{
+  "id": "tropical-vita",
+  "image": "img/Напитки/Тропический витамин.png",
+  "nameEn": "Tropical Vita",
+  "nameRu": "Тропический витамин",
+  "category": "vitamins",
+  "functionShort": "Comprehensive Vitamin Support",
+  "functionRu": "Манго, маракуйя и ананас — солнечная энергия тропических фруктов в одном стакане",
+  "ingredients": "Мякоть маракуйи, мякоть манго, сироп манго, сироп агавы, ароматическая вода персика, ананас, кокосовая вода, банан",
+  "activeComponents": [
+    "Vit C",
+    "Vit A",
+    "K",
+    "Фруктовые ферменты",
+    "Растительные антиоксиданты"
+  ],
+  "volume": "450 мл",
+  "price": 790,
+  "calories": 360,
+  "temperature": [
+    "17-24°C",
+    "6-10°C"
+  ],
+  "whenToDrink": "В течение дня",
+  "hasBoosters": true,
+  "sortOrder": 2
+}

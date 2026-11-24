@@ -1,0 +1,12 @@
+{
+  "id": "chia",
+  "name": "Chia",
+  "nameRu": "Семена чиа",
+  "function": "омега-кислоты и насыщение",
+  "activeIngredients": "семена чиа",
+  "price": 25,
+  "image": "img/бустеры/Chia.png",
+  "bg": "#F5F0E8",
+  "color": "#5C4A1E",
+  "sortOrder": 6
+}

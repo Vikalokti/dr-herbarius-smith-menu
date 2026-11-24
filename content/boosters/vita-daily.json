@@ -1,0 +1,12 @@
+{
+  "id": "vita-daily",
+  "name": "Vita Daily",
+  "nameRu": "Вита Дейли",
+  "function": "гидратация и электролитный баланс",
+  "activeIngredients": "магний, калий, натрий, витамин C, витамины группы B",
+  "price": 75,
+  "image": "img/бустеры/Vita Daily.png",
+  "bg": "#F5F0E8",
+  "color": "#5C4A1E",
+  "sortOrder": 4
+}

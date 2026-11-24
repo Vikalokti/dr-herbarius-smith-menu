@@ -1,0 +1,27 @@
+{
+  "id": "local-tea",
+  "image": "img/Напитки/Локал Чай.png",
+  "nameEn": "Local Tea",
+  "nameRu": "Локал Чай",
+  "category": "tea-coffee",
+  "functionShort": "Refreshment & Hydration",
+  "functionRu": "Освежает, поддерживает водный баланс и сохраняет ощущение лёгкости",
+  "fruitBase": [
+    {
+      "name": "Краснодарский чай"
+    },
+    {
+      "name": "Сок абхазского лимона"
+    },
+    {
+      "name": "Мёд разнотравье"
+    }
+  ],
+  "price": 390,
+  "temperature": [
+    "65-70°C",
+    "6-10°C"
+  ],
+  "whenToDrink": "В течение дня",
+  "sortOrder": 48
+}

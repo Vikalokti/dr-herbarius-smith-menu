@@ -1,0 +1,12 @@
+{
+  "id": "energiser",
+  "name": "Energiser",
+  "nameRu": "Энерджайзер",
+  "function": "повышение энергии",
+  "activeIngredients": "гуарана, женьшень, гранат",
+  "price": 75,
+  "image": "img/бустеры/Energiser.png",
+  "bg": "#F9EAE8",
+  "color": "#7A2A1E",
+  "sortOrder": 1
+}

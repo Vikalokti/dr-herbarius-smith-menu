@@ -1,0 +1,21 @@
+{
+  "id": "cold-brew-coffee",
+  "image": "img/Напитки/Колд Брю кофе.png",
+  "nameEn": "Cold Brew Coffee",
+  "nameRu": "Колд Брю Кофе",
+  "category": "tea-coffee",
+  "functionShort": "Gentle Tonic & Mental Clarity",
+  "functionRu": "Мягко тонизирует, помогает сохранять концентрацию и поддерживает ясность мышления",
+  "fruitBase": [
+    {
+      "name": "100 % арабика из Эфиопии, деликатный кофе холодного настоя с ярким ароматом банана и лесного ореха"
+    }
+  ],
+  "price": 390,
+  "volume": "450 мл",
+  "temperature": [
+    "6-10°C"
+  ],
+  "whenToDrink": "В течение дня",
+  "sortOrder": 40
+}

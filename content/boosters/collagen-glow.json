@@ -1,0 +1,12 @@
+{
+  "id": "collagen-glow",
+  "name": "Collagen Glow",
+  "nameRu": "Коллаген Глоу",
+  "function": "поддержка кожи",
+  "activeIngredients": "коллаген + витамины",
+  "price": 50,
+  "image": "img/бустеры/Collagen Glow.png",
+  "bg": "#F5F0E8",
+  "color": "#5C4A1E",
+  "sortOrder": 9
+}

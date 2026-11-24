@@ -1,0 +1,12 @@
+{
+  "id": "protein-blend",
+  "name": "Protein Blend",
+  "nameRu": "Протеин Бленд",
+  "function": "белковая поддержка",
+  "activeIngredients": "мультипротеиновый комплекс",
+  "price": 50,
+  "image": "img/бустеры/Protein Blend.png",
+  "bg": "#F5F0E8",
+  "color": "#5C4A1E",
+  "sortOrder": 8
+}

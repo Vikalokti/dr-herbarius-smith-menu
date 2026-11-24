@@ -1,0 +1,12 @@
+{
+  "id": "oats",
+  "name": "Oats",
+  "nameRu": "Овсяные хлопья",
+  "function": "источник клетчатки",
+  "activeIngredients": "овсяные хлопья",
+  "price": 25,
+  "image": "img/бустеры/Oats.png",
+  "bg": "#F5F0E8",
+  "color": "#5C4A1E",
+  "sortOrder": 0
+}

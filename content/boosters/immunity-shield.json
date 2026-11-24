@@ -1,0 +1,12 @@
+{
+  "id": "immunity-shield",
+  "name": "Immunity Shield",
+  "nameRu": "Иммунити Шилд",
+  "function": "поддержка иммунитета",
+  "activeIngredients": "витамин A, витамин C, цинк, матча",
+  "price": 75,
+  "image": "img/бустеры/Immunity Shield.png",
+  "bg": "#EDF5E8",
+  "color": "#265B2D",
+  "sortOrder": 7
+}

@@ -1,0 +1,187 @@
+backend:
+  name: turbo-github
+  turbo_site_id: d52fd0fd-08e5-4ae1-ab9c-5b698d5a21d4
+  branch: main
+
+media_folder: img/uploads
+public_folder: /img/uploads
+publish_mode: simple
+locale: ru
+
+collections:
+  - name: drinks
+    label: Напитки
+    label_singular: Напиток
+    folder: content/drinks
+    create: true
+    delete: true
+    extension: json
+    format: json
+    slug: "{{slug}}"
+    summary: "{{nameRu}} · {{price}} ₽"
+    sortable_fields: [sortOrder, nameRu, price]
+    fields:
+      - { label: ID, name: id, widget: hidden }
+      - { label: Порядок в меню, name: sortOrder, widget: number, value_type: int, required: false }
+      - { label: Название на русском, name: nameRu, widget: string }
+      - { label: Название на английском, name: nameEn, widget: string, required: false }
+      - label: Категория
+        name: category
+        widget: select
+        options:
+          - { label: Витаминные миксы, value: vitamins }
+          - { label: Мышление и настроение, value: mind }
+          - { label: Спортивные напитки, value: sport }
+          - { label: Секретные эликсиры, value: elixirs }
+          - { label: Быстрый энергетический буст, value: energy-boost }
+          - { label: Зелёные напитки, value: green }
+          - { label: Бьюти-напитки, value: beauty }
+          - { label: Напитки для микробиоты, value: microbiota }
+          - { label: Чай и кофе, value: tea-coffee }
+          - { label: Тоники с клетчаткой, value: fiber }
+          - { label: Ферментированные напитки, value: fermented }
+          - { label: Фитокомплексы, value: herbal }
+          - { label: Детокс-воды, value: detox }
+          - { label: Кислородные коктейли, value: oxygen }
+      - { label: Скрыть из меню, name: hidden, widget: boolean, required: false }
+      - { label: Цена, name: price, widget: number, value_type: int }
+      - { label: Фото, name: image, widget: image, required: false }
+      - { label: Короткое описание, name: functionRu, widget: text, required: false }
+      - { label: Короткое описание на английском, name: functionShort, widget: text, required: false }
+      - { label: Описание, name: description, widget: text, required: false }
+      - { label: Состав, name: ingredients, widget: text, required: false }
+      - label: Фруктовая основа
+        name: fruitBase
+        widget: list
+        required: false
+        fields:
+          - { label: Ингредиент, name: name, widget: string }
+          - { label: Описание, name: effect, widget: text, required: false }
+      - { label: Активные компоненты, name: activeComponents, widget: list, required: false }
+      - { label: Витамины и минералы, name: vitaminsList, widget: text, required: false }
+      - label: Фитокомпоненты
+        name: phytoComposition
+        widget: list
+        required: false
+        fields:
+          - { label: Название, name: name, widget: string }
+          - { label: Действие, name: effect, widget: text }
+      - label: Нутрицевтики
+        name: nutraceuticals
+        widget: list
+        required: false
+        fields:
+          - { label: Название, name: name, widget: string }
+          - { label: Действие, name: effect, widget: text }
+      - { label: Калорийность, name: calories, widget: number, required: false }
+      - { label: Объём, name: volume, widget: string, required: false }
+      - { label: Температура подачи, name: temperature, widget: list, required: false }
+      - { label: Когда пить, name: whenToDrink, widget: string, required: false }
+      - { label: Доступны бустеры, name: hasBoosters, widget: boolean, required: false }
+      - { label: Простое описание эффекта, name: simpleWords, widget: list, required: false }
+      - { label: Сенсорный профиль, name: sensorProfile, widget: text, required: false }
+      - { label: В каких случаях подходит, name: whenUseful, widget: list, required: false }
+      - { label: Рекомендации по употреблению, name: lifestyle, widget: list, required: false }
+      - { label: Рекомендация, name: recommendation, widget: text, required: false }
+      - { label: Вкусовой профиль, name: flavorProfile, widget: text, required: false }
+      - { label: Продолжительность эффекта, name: effectDuration, widget: string, required: false }
+      - { label: Комментарий врача, name: doctorNote, widget: text, required: false }
+      - { label: Сочетание компонентов, name: synergy, widget: text, required: false }
+      - label: Этапы действия
+        name: timeline
+        widget: list
+        required: false
+        fields:
+          - { label: Время, name: time, widget: string }
+          - { label: Заголовок, name: title, widget: string }
+          - { label: Описание, name: effect, widget: text }
+          - { label: Ощущения, name: feeling, widget: text }
+
+  - name: boosters
+    label: Бустеры
+    label_singular: Бустер
+    folder: content/boosters
+    create: true
+    delete: true
+    extension: json
+    format: json
+    slug: "{{slug}}"
+    summary: "{{nameRu}} · {{price}} ₽"
+    fields:
+      - { label: ID, name: id, widget: hidden }
+      - { label: Порядок в меню, name: sortOrder, widget: number, value_type: int, required: false }
+      - { label: Скрыть из меню, name: hidden, widget: boolean, required: false }
+      - { label: Название, name: nameRu, widget: string }
+      - { label: Название на английском, name: name, widget: string, required: false }
+      - { label: Функция, name: function, widget: string }
+      - { label: Активные ингредиенты, name: activeIngredients, widget: text }
+      - { label: Цена, name: price, widget: number, value_type: int }
+      - { label: Фото, name: image, widget: image, required: false }
+      - { label: Цвет фона, name: bg, widget: color, required: false }
+      - { label: Цвет текста, name: color, widget: color, required: false }
+
+  - name: snacks
+    label: Перекусы
+    files:
+      - name: menu
+        label: Меню перекусов
+        file: content/snacks.json
+        fields:
+          - label: База конфет и печенья
+            name: richBase
+            widget: object
+            fields:
+              - { label: Название, name: name, widget: string }
+              - { label: Название на английском, name: nameEn, widget: string, required: false }
+              - { label: Состав, name: ingredients, widget: text }
+          - label: Разделы и позиции
+            name: sections
+            widget: list
+            summary: "{{fields.name}}"
+            fields:
+              - { label: ID раздела, name: id, widget: string }
+              - { label: Название, name: name, widget: string }
+              - { label: Название на английском, name: nameEn, widget: string, required: false }
+              - { label: Цена по умолчанию, name: price, widget: number, required: false }
+              - { label: Примечание к цене, name: priceNote, widget: string, required: false }
+              - { label: Только заголовок раздела, name: isSectionTitle, widget: boolean, required: false }
+              - { label: Фото, name: image, widget: image, required: false }
+              - label: Позиции
+                name: items
+                widget: list
+                fields:
+                  - { label: ID, name: id, widget: string }
+                  - { label: Название, name: name, widget: string }
+                  - { label: Название на английском, name: nameEn, widget: string, required: false }
+                  - { label: Состав, name: ingredients, widget: text, required: false }
+                  - { label: Цена, name: price, widget: number, required: false }
+                  - { label: Фото, name: image, widget: image, required: false }
+
+  - name: mono
+    label: Травы и купажи
+    files:
+      - name: ingredients
+        label: Моно-травы и купажи
+        file: content/mono.json
+        fields:
+          - label: Травы
+            name: MONO_HERBS
+            widget: list
+            fields:
+              - { label: Название, name: name, widget: string }
+              - { label: Часть растения, name: part, widget: string, required: false }
+              - { label: Активные компоненты, name: source, widget: string, required: false }
+              - { label: Действие, name: effect, widget: text, required: false }
+              - { label: Группа, name: group, widget: string, required: false }
+          - label: Готовые купажи
+            name: MONO_BLENDS
+            widget: list
+            fields:
+              - { label: Название, name: name, widget: string }
+              - { label: Состав, name: ingredients, widget: text }
+          - label: Подбор по состоянию
+            name: MONO_BY_STATE
+            widget: list
+            fields:
+              - { label: Состояние, name: state, widget: string }
+              - { label: Травы, name: herbs, widget: text }

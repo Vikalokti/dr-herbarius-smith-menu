@@ -1,0 +1,27 @@
+{
+  "id": "herbal-tonic-matcha",
+  "image": "img/Напитки/Матча Хербл Тоник.png",
+  "nameEn": "Herbal Tonic Matcha",
+  "nameRu": "Матча Хербл Тоник",
+  "category": "tea-coffee",
+  "functionShort": "Sustained Energy & Focus",
+  "functionRu": "Поддерживает концентрацию, мягко тонизирует и обеспечивает длительное ощущение энергии",
+  "fruitBase": [
+    {
+      "name": "Матча"
+    },
+    {
+      "name": "Тоник"
+    },
+    {
+      "name": "Настой гибискуса"
+    }
+  ],
+  "price": 390,
+  "volume": "450 мл",
+  "temperature": [
+    "6-10°C"
+  ],
+  "whenToDrink": "В течение дня",
+  "sortOrder": 45
+}

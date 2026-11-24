@@ -1,0 +1,12 @@
+{
+  "id": "superfruit",
+  "name": "Superfruit",
+  "nameRu": "Суперфрут",
+  "function": "антиоксидантная защита",
+  "activeIngredients": "асаи, годжи, клюква, гранат",
+  "price": 75,
+  "image": "img/бустеры/Superfruit.png",
+  "bg": "#F5E8F0",
+  "color": "#6B2550",
+  "sortOrder": 5
+}

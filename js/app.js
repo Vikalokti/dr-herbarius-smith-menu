@@ -187,7 +187,7 @@ const App = {
 
     const main = document.getElementById('main-content');
     const categoriesHTML = CATEGORIES.filter(cat => cat.id !== 'boosters' && !cat.hidden).map(cat => {
-      const count = DRINKS.filter(d => d.category === cat.id).length;
+      const count = DRINKS.filter(d => d.category === cat.id && !d.hidden).length;
       if (cat.id === 'mono') {
         return `
           <a href="#category/${cat.id}" class="category-card" style="background: ${cat.colorLight}; color: ${cat.color};">
@@ -451,7 +451,7 @@ const App = {
           </div>
           <div class="boosters-section">
             <div class="boosters-grid">
-              ${BOOSTERS.map(b => `
+              ${BOOSTERS.filter(b => !b.hidden).map(b => `
                 <div class="booster-card">
                   <div class="booster-name">${b.activeIngredients.charAt(0).toUpperCase() + b.activeIngredients.slice(1)}</div>
                   <div class="booster-function" style="color:${b.color || '#265B2D'};">Функция: ${b.function}</div>
@@ -490,7 +490,7 @@ const App = {
       return;
     }
 
-    const drinks = DRINKS.filter(d => d.category === catId);
+    const drinks = DRINKS.filter(d => d.category === catId && !d.hidden);
 
     main.innerHTML = `
       <div class="page-enter category-page" style="background: ${cat.colorLight};">
@@ -542,7 +542,7 @@ const App = {
       <div class="boosters-section">
         <div class="boosters-section-title">Добавь функциональный бустер к напитку</div>
         <div class="boosters-grid">
-          ${BOOSTERS.map(b => `
+          ${BOOSTERS.filter(b => !b.hidden).map(b => `
             <div class="booster-card" style="background:${b.bg || '#F5F0E8'};">
               <div class="booster-card-text">
                 <div class="booster-name" style="color:${b.color || '#265B2D'};">${b.activeIngredients.charAt(0).toUpperCase() + b.activeIngredients.slice(1)}</div>
@@ -1054,7 +1054,7 @@ const App = {
   // Напитки из скрытых категорий не показываем в поиске и избранном
   visibleDrinks() {
     const hidden = CATEGORIES.filter(c => c.hidden).map(c => c.id);
-    return DRINKS.filter(d => !hidden.includes(d.category));
+    return DRINKS.filter(d => !d.hidden && !hidden.includes(d.category));
   },
 
   getComponentColor(c) {
@@ -1084,5 +1084,14 @@ const App = {
   }
 };
 
-// Initialize
-document.addEventListener('DOMContentLoaded', () => App.init());
+// Load the editable catalog before the first page render.
+document.addEventListener('DOMContentLoaded', async () => {
+  try {
+    await loadCatalog();
+    App.init();
+  } catch (error) {
+    console.error(error);
+    document.getElementById('main-content').innerHTML =
+      '<p class="catalog-load-error">Не удалось загрузить меню. Обновите страницу чуть позже.</p>';
+  }
+});

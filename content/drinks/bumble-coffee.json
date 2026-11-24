@@ -1,0 +1,27 @@
+{
+  "id": "bumble-coffee",
+  "image": "img/Напитки/Колд Брю Бамбл.png",
+  "nameEn": "Cold Brew Bumble",
+  "nameRu": "Колд Брю Бамбл",
+  "category": "tea-coffee",
+  "functionShort": "Gentle Tonic & Mental Clarity",
+  "functionRu": "Мягко тонизирует, помогает сохранять концентрацию и поддерживает ясность мышления",
+  "fruitBase": [
+    {
+      "name": "Колд Брю Кофе"
+    },
+    {
+      "name": "Фреш апельсина"
+    },
+    {
+      "name": "Сироп на выбор"
+    }
+  ],
+  "price": 390,
+  "volume": "450 мл",
+  "temperature": [
+    "6-10°C"
+  ],
+  "whenToDrink": "В течение дня",
+  "sortOrder": 41
+}
