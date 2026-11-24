@@ -46,23 +46,53 @@ collections:
       - { label: Скрыть из меню, name: hidden, widget: boolean, required: false }
       - { label: Цена, name: price, widget: number, value_type: int }
       - { label: Фото, name: image, widget: image, required: false }
-      - { label: Короткое описание, name: functionRu, widget: text, required: false }
-      - { label: Короткое описание на английском, name: functionShort, widget: text, required: false }
-      - { label: Описание, name: description, widget: text, required: false }
-      - { label: Состав, name: ingredients, widget: text, required: false }
+      - label: "✍️ Короткое описание"
+        name: functionRu
+        widget: richtext
+        modes: [rich_text]
+        required: false
+        hint: Кратко объясните, чем полезен напиток. Текст можно разбить на абзацы или список.
+        buttons: [bold, italic, bulleted-list, numbered-list]
+      - label: "✍️ Короткое описание на английском"
+        name: functionShort
+        widget: richtext
+        modes: [rich_text]
+        required: false
+        buttons: [bold, italic, bulleted-list, numbered-list]
+      - label: "📝 Описание"
+        name: description
+        widget: richtext
+        modes: [rich_text]
+        required: false
+        hint: Разделяйте мысли на абзацы. Кнопка цветного блока добавляет заметное выделение.
+        buttons: [bold, italic, strikethrough, link, heading-two, heading-three, quote, bulleted-list, numbered-list]
+        editor_components: [color-highlight]
+      - label: "🧾 Состав"
+        name: ingredients
+        widget: richtext
+        modes: [rich_text]
+        required: false
+        buttons: [bold, italic, bulleted-list, numbered-list]
+        editor_components: [color-highlight]
       - label: Фруктовая основа
         name: fruitBase
         widget: list
         required: false
+        collapsed: true
+        minimize_collapsed: true
+        summary: "{{fields.name}}"
         fields:
           - { label: Ингредиент, name: name, widget: string }
           - { label: Описание, name: effect, widget: text, required: false }
       - { label: Активные компоненты, name: activeComponents, widget: list, required: false }
-      - { label: Витамины и минералы, name: vitaminsList, widget: text, required: false }
+      - { label: "🧪 Витамины и минералы", name: vitaminsList, widget: richtext, modes: [rich_text], required: false, buttons: [bold, italic, bulleted-list, numbered-list] }
       - label: Фитокомпоненты
         name: phytoComposition
         widget: list
         required: false
+        collapsed: true
+        minimize_collapsed: true
+        summary: "{{fields.name}}"
         fields:
           - { label: Название, name: name, widget: string }
           - { label: Действие, name: effect, widget: text }
@@ -70,6 +100,9 @@ collections:
         name: nutraceuticals
         widget: list
         required: false
+        collapsed: true
+        minimize_collapsed: true
+        summary: "{{fields.name}}"
         fields:
           - { label: Название, name: name, widget: string }
           - { label: Действие, name: effect, widget: text }
@@ -79,18 +112,21 @@ collections:
       - { label: Когда пить, name: whenToDrink, widget: string, required: false }
       - { label: Доступны бустеры, name: hasBoosters, widget: boolean, required: false }
       - { label: Простое описание эффекта, name: simpleWords, widget: list, required: false }
-      - { label: Сенсорный профиль, name: sensorProfile, widget: text, required: false }
+      - { label: "👃 Сенсорный профиль", name: sensorProfile, widget: richtext, modes: [rich_text], required: false, buttons: [bold, italic, bulleted-list, numbered-list] }
       - { label: В каких случаях подходит, name: whenUseful, widget: list, required: false }
       - { label: Рекомендации по употреблению, name: lifestyle, widget: list, required: false }
-      - { label: Рекомендация, name: recommendation, widget: text, required: false }
-      - { label: Вкусовой профиль, name: flavorProfile, widget: text, required: false }
+      - { label: "💡 Рекомендация", name: recommendation, widget: richtext, modes: [rich_text], required: false, buttons: [bold, italic, bulleted-list, numbered-list], editor_components: [color-highlight] }
+      - { label: "🍹 Вкусовой профиль", name: flavorProfile, widget: richtext, modes: [rich_text], required: false, buttons: [bold, italic, bulleted-list, numbered-list] }
       - { label: Продолжительность эффекта, name: effectDuration, widget: string, required: false }
-      - { label: Комментарий врача, name: doctorNote, widget: text, required: false }
-      - { label: Сочетание компонентов, name: synergy, widget: text, required: false }
+      - { label: "🩺 Комментарий врача", name: doctorNote, widget: richtext, modes: [rich_text], required: false, buttons: [bold, italic, bulleted-list, numbered-list] }
+      - { label: "🔗 Сочетание компонентов", name: synergy, widget: richtext, modes: [rich_text], required: false, buttons: [bold, italic, bulleted-list, numbered-list] }
       - label: Этапы действия
         name: timeline
         widget: list
         required: false
+        collapsed: true
+        minimize_collapsed: true
+        summary: "{{fields.time}} · {{fields.title}}"
         fields:
           - { label: Время, name: time, widget: string }
           - { label: Заголовок, name: title, widget: string }
