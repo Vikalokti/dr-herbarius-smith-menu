@@ -400,6 +400,6 @@ CMS.registerPreviewStyle('/css/styles.css');
 CMS.registerPreviewStyle('/admin/preview.css');
 CMS.registerPreviewTemplate('drinks', DrinkPreview);
 CMS.registerPreviewTemplate('boosters', BoosterPreview);
-CMS.registerPreviewTemplate('snacks', SnacksPreview);
-CMS.registerPreviewTemplate('mono', MonoPreview);
+CMS.registerPreviewTemplate('menu', SnacksPreview);
+CMS.registerPreviewTemplate('ingredients', MonoPreview);
 CMS.registerPreviewTemplate('categories', CategoriesPreview);
