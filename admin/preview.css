@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: #fafaf5;
+  color: #265b2d;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+.drink-preview {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 28px 24px 48px;
+}
+
+.drink-preview-caption {
+  margin: 0 0 14px 2px;
+  color: #8f8f84;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.drink-preview-card {
+  display: flex;
+  gap: 18px;
+  align-items: stretch;
+  padding: 18px;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  color: var(--preview-accent, #265b2d);
+}
+
+.drink-preview-image {
+  display: flex;
+  flex: 0 0 128px;
+  align-items: center;
+  justify-content: center;
+  min-height: 152px;
+  overflow: hidden;
+  border-radius: 12px;
+  background: var(--preview-tint, #eff6ee);
+}
+
+.drink-preview-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 152px;
+  object-fit: contain;
+}
+
+.drink-preview-info {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.drink-preview-category {
+  display: inline-block;
+  margin-bottom: 8px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: var(--preview-tint, #eff6ee);
+  color: var(--preview-accent, #265b2d);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.drink-preview-name {
+  margin: 0;
+  color: var(--preview-accent, #265b2d);
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.drink-preview-name-en {
+  margin-top: 3px;
+  color: #5a7a5e;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.drink-preview-function {
+  margin: 12px 0 0;
+  color: #5a7a5e;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.drink-preview-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: auto;
+  padding-top: 14px;
+}
+
+.drink-preview-meta span {
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: #f3f3ed;
+  color: #5a7a5e;
+  font-size: 11px;
+}
+
+.drink-preview-price {
+  margin-top: 10px;
+  color: var(--preview-accent, #265b2d);
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.drink-preview-description,
+.drink-preview-ingredients {
+  margin-top: 16px;
+  padding: 18px;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.drink-preview-description h2,
+.drink-preview-ingredients h2 {
+  margin: 0 0 8px;
+  color: #265b2d;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.drink-preview-description p,
+.drink-preview-ingredients li {
+  margin: 0;
+  color: #5a7a5e;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.drink-preview-ingredients ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.drink-preview-ingredients li + li {
+  margin-top: 5px;
+}
+
+@media (max-width: 520px) {
+  .drink-preview {
+    padding: 18px 14px 32px;
+  }
+
+  .drink-preview-card {
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .drink-preview-image {
+    flex-basis: 88px;
+    min-height: 120px;
+  }
+
+  .drink-preview-image img {
+    min-height: 120px;
+  }
+
+  .drink-preview-name {
+    font-size: 18px;
+  }
+}
