@@ -25,10 +25,7 @@ function previewSection(title, content) {
 
 function previewParagraph(title, value) {
   if (!value) return null;
-  return previewSection(title, h('div', {
-    className: 'drink-preview-copy formatted-copy',
-    dangerouslySetInnerHTML: { __html: renderFormattedText(value) },
-  }));
+  return previewSection(title, h('p', { className: 'drink-preview-copy' }, value));
 }
 
 function previewBullets(title, values) {
@@ -96,7 +93,7 @@ var DrinkPreview = createClass({
         h('span', { className: 'drink-preview-category' }, category.name),
         h('h1', { className: 'drink-preview-name' }, data.nameRu || 'Название напитка'),
         data.nameEn ? h('div', { className: 'drink-preview-name-en' }, data.nameEn) : null,
-        h('p', { className: 'drink-preview-function' }, firstSentence(data.description || data.functionRu || data.functionShort || '')),
+        h('p', { className: 'drink-preview-function' }, data.description ? data.description.split('\n')[0] : (data.functionRu || data.functionShort || '')),
         h('div', { className: 'drink-preview-meta' },
           data.volume ? h('span', {}, data.volume) : null,
           data.calories ? h('span', {}, data.calories + ' ккал') : null,
@@ -137,34 +134,3 @@ var DrinkPreview = createClass({
 CMS.registerPreviewStyle('/css/styles.css');
 CMS.registerPreviewStyle('/admin/preview.css');
 CMS.registerPreviewTemplate('drinks', DrinkPreview);
-
-CMS.registerEditorComponent({
-  id: 'color-highlight',
-  label: 'Цветное выделение',
-  fields: [
-    {
-      name: 'color',
-      label: 'Цвет блока',
-      widget: 'select',
-      options: [
-        { label: 'Зелёный', value: 'green' },
-        { label: 'Золотой', value: 'gold' },
-        { label: 'Розовый', value: 'rose' },
-      ],
-      default: 'green',
-    },
-    { name: 'text', label: 'Текст', widget: 'text' },
-  ],
-  pattern: /^:::highlight-(green|gold|rose)\s*\n([\s\S]*?)\n:::$m,
-  fromBlock: function (match) {
-    return { color: match[1], text: match[2] };
-  },
-  toBlock: function (data) {
-    var color = ['green', 'gold', 'rose'].indexOf(data.color) >= 0 ? data.color : 'green';
-    return ':::highlight-' + color + '\n' + (data.text || '') + '\n:::';
-  },
-  toPreview: function (data) {
-    var color = ['green', 'gold', 'rose'].indexOf(data.color) >= 0 ? data.color : 'green';
-    return '<aside class="text-highlight text-highlight--' + color + '">' + renderFormattedText(data.text || '') + '</aside>';
-  },
-});
