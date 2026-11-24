@@ -5,7 +5,7 @@
   "function": "поддержка детокс-процессов",
   "activeIngredients": "экстракт зелёных ростков пшеницы, кейл, спирулина",
   "price": 75,
-  "image": "img/бустеры/Green Superfood.png",
+  "image": "/img/бустеры/Green Superfood.png",
   "bg": "#E8F5F0",
   "color": "#1A5C48",
   "sortOrder": 10

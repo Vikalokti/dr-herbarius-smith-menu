@@ -1,6 +1,6 @@
 {
   "id": "matcha-milk",
-  "image": "img/Напитки/Матча Латте.png",
+  "image": "/img/Напитки/Матча Латте.png",
   "nameEn": "Matcha Latte",
   "nameRu": "Матча Латте",
   "category": "tea-coffee",

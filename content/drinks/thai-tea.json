@@ -1,6 +1,6 @@
 {
   "id": "thai-tea",
-  "image": "img/Напитки/Тайский чай.png",
+  "image": "/img/Напитки/Тайский чай.png",
   "nameEn": "Thai Tea",
   "nameRu": "Тайский чай",
   "category": "tea-coffee",

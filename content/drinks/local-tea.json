@@ -1,6 +1,6 @@
 {
   "id": "local-tea",
-  "image": "img/Напитки/Локал Чай.png",
+  "image": "/img/Напитки/Локал Чай.png",
   "nameEn": "Local Tea",
   "nameRu": "Локал Чай",
   "category": "tea-coffee",

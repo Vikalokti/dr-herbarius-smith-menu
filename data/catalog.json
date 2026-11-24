@@ -211,7 +211,7 @@
   "DRINKS": [
     {
       "id": "citrus-vita",
-      "image": "img/Напитки/Цитрусовый витамин.png",
+      "image": "/img/Напитки/Цитрусовый витамин.png",
       "nameEn": "Citrus Vita",
       "nameRu": "Цитрусовый витамин",
       "category": "vitamins",
@@ -268,7 +268,7 @@
     },
     {
       "id": "berry-vita",
-      "image": "img/Напитки/Ягодный витамин.png",
+      "image": "/img/Напитки/Ягодный витамин.png",
       "nameEn": "Berry Vita",
       "nameRu": "Ягодный витамин",
       "category": "vitamins",
@@ -294,7 +294,7 @@
     },
     {
       "id": "tropical-vita",
-      "image": "img/Напитки/Тропический витамин.png",
+      "image": "/img/Напитки/Тропический витамин.png",
       "nameEn": "Tropical Vita",
       "nameRu": "Тропический витамин",
       "category": "vitamins",
@@ -320,7 +320,7 @@
     },
     {
       "id": "lemon-vita",
-      "image": "img/Напитки/Лимонный витамин.png",
+      "image": "/img/Напитки/Лимонный витамин.png",
       "nameEn": "Lemon Vita",
       "nameRu": "Лимонный витамин",
       "category": "vitamins",
@@ -345,7 +345,7 @@
     },
     {
       "id": "silent-warming",
-      "image": "img/Напитки/Тихое тепло.png",
+      "image": "/img/Напитки/Тихое тепло.png",
       "nameEn": "Silent Warming",
       "nameRu": "Тихое тепло",
       "category": "mind",
@@ -512,7 +512,7 @@
     },
     {
       "id": "serotonin-sun",
-      "image": "img/Напитки/Серотониновое солнце.png",
+      "image": "/img/Напитки/Серотониновое солнце.png",
       "nameEn": "Serotonin Sun",
       "nameRu": "Серотониновое солнце",
       "category": "mind",
@@ -709,7 +709,7 @@
     },
     {
       "id": "neuro-clear",
-      "image": "img/Напитки/Нейро Ясность.png",
+      "image": "/img/Напитки/Нейро Ясность.png",
       "nameEn": "Neuro Clear",
       "nameRu": "Нейро Ясность",
       "category": "mind",
@@ -887,7 +887,7 @@
     },
     {
       "id": "mental-clear",
-      "image": "img/Напитки/Ментальная ясность.png",
+      "image": "/img/Напитки/Ментальная ясность.png",
       "nameEn": "Mental Clear Formula",
       "nameRu": "Ментальная ясность",
       "category": "mind",
@@ -1206,7 +1206,7 @@
     },
     {
       "id": "pre-work",
-      "image": "img/Напитки/Предстарт.png",
+      "image": "/img/Напитки/Предстарт.png",
       "nameEn": "Pre-Work",
       "nameRu": "Предстарт",
       "category": "sport",
@@ -1361,7 +1361,7 @@
     },
     {
       "id": "recovery",
-      "image": "img/Напитки/Восстановление.png",
+      "image": "/img/Напитки/Восстановление.png",
       "nameEn": "Recovery",
       "nameRu": "Восстановление",
       "category": "sport",
@@ -1493,7 +1493,7 @@
     },
     {
       "id": "electro-balance",
-      "image": "img/Напитки/Электролитный баланс.png",
+      "image": "/img/Напитки/Электролитный баланс.png",
       "nameEn": "Electro Balance",
       "nameRu": "Электролитный баланс",
       "category": "sport",
@@ -1620,7 +1620,7 @@
     },
     {
       "id": "endurance",
-      "image": "img/Напитки/Выносливость.png",
+      "image": "/img/Напитки/Выносливость.png",
       "nameEn": "Endurance",
       "nameRu": "Выносливость",
       "category": "sport",
@@ -1763,7 +1763,7 @@
     },
     {
       "id": "tibetan-monk",
-      "image": "img/Напитки/Тибетский монах.png",
+      "image": "/img/Напитки/Тибетский монах.png",
       "nameEn": "Tibetan Monk",
       "nameRu": "Тибетский монах",
       "category": "elixirs",
@@ -1908,7 +1908,7 @@
     },
     {
       "id": "caucasian-longevity",
-      "image": "img/Напитки/Кавказский долгожитель.png",
+      "image": "/img/Напитки/Кавказский долгожитель.png",
       "nameEn": "Caucasian Longevity",
       "nameRu": "Кавказский долгожитель",
       "category": "elixirs",
@@ -2053,7 +2053,7 @@
     },
     {
       "id": "peruvian-shaman",
-      "image": "img/Напитки/Перуанский шаман.png",
+      "image": "/img/Напитки/Перуанский шаман.png",
       "nameEn": "Peruvian Shaman",
       "nameRu": "Перуанский шаман",
       "category": "elixirs",
@@ -2197,7 +2197,7 @@
     },
     {
       "id": "neuro-potok",
-      "image": "img/Напитки/Нейропоток.png",
+      "image": "/img/Напитки/Нейропоток.png",
       "nameEn": "Neuro Flow",
       "nameRu": "Нейропоток",
       "category": "energy-boost",
@@ -2372,7 +2372,7 @@
     },
     {
       "id": "energo-ritm",
-      "image": "img/Напитки/Энергоритм.png",
+      "image": "/img/Напитки/Энергоритм.png",
       "nameEn": "Energy Rhythm",
       "nameRu": "Энергоритм",
       "category": "energy-boost",
@@ -2563,7 +2563,7 @@
     },
     {
       "id": "yasny-fokus",
-      "image": "img/Напитки/Ясный фокус.png",
+      "image": "/img/Напитки/Ясный фокус.png",
       "nameEn": "Clear Focus",
       "nameRu": "Ясный фокус",
       "category": "energy-boost",
@@ -2741,7 +2741,7 @@
     },
     {
       "id": "pure-green",
-      "image": "img/Pure Green.png",
+      "image": "/img/Pure Green.png",
       "nameEn": "Pure Green",
       "nameRu": "Чистая зелень",
       "category": "green",
@@ -2885,7 +2885,7 @@
     },
     {
       "id": "inner-flow",
-      "image": "img/Напитки/Внутренний поток.png",
+      "image": "/img/Напитки/Внутренний поток.png",
       "nameEn": "Inner Flow",
       "nameRu": "Внутренний поток",
       "category": "microbiota",
@@ -3023,7 +3023,7 @@
     },
     {
       "id": "cell-flow",
-      "image": "img/Сell Flow.png",
+      "image": "/img/Сell Flow.png",
       "nameEn": "Cell Flow",
       "nameRu": "Клеточный поток",
       "category": "green",
@@ -3171,7 +3171,7 @@
     },
     {
       "id": "rose-elastic-glow",
-      "image": "img/Напитки/Розовое сияние упругости.png",
+      "image": "/img/Напитки/Розовое сияние упругости.png",
       "nameEn": "Rose Elastic Glow",
       "nameRu": "Эластичность и сияние",
       "category": "beauty",
@@ -3318,7 +3318,7 @@
     },
     {
       "id": "berry-shield",
-      "image": "img/Напитки/Ягодный щит.png",
+      "image": "/img/Напитки/Ягодный щит.png",
       "nameEn": "Berry Shield",
       "nameRu": "Ягодный щит",
       "category": "beauty",
@@ -3478,7 +3478,7 @@
     },
     {
       "id": "fiber-comfort",
-      "image": "img/Напитки/Файбер Комфорт.png",
+      "image": "/img/Напитки/Файбер Комфорт.png",
       "nameEn": "Fiber Comfort",
       "nameRu": "Файбер Комфорт",
       "category": "microbiota",
@@ -3623,7 +3623,7 @@
     },
     {
       "id": "metabo-control",
-      "image": "img/Metabo Control.png",
+      "image": "/img/Metabo Control.png",
       "nameEn": "Metabo Control",
       "nameRu": "Метабо Контроль",
       "category": "fiber",
@@ -3762,7 +3762,7 @@
     },
     {
       "id": "clear-fiber",
-      "image": "img/Clear Fiber.png",
+      "image": "/img/Clear Fiber.png",
       "nameEn": "Clear Fiber",
       "nameRu": "Клир Файбер",
       "category": "fiber",
@@ -3919,7 +3919,7 @@
     },
     {
       "id": "biobalance",
-      "image": "img/Biobalance.png",
+      "image": "/img/Biobalance.png",
       "nameEn": "Biobalance",
       "nameRu": "Биобаланс",
       "category": "fermented",
@@ -4054,7 +4054,7 @@
     },
     {
       "id": "immunoferm",
-      "image": "img/Напитки/Иммуноферм.png",
+      "image": "/img/Напитки/Иммуноферм.png",
       "nameEn": "Immunoferm",
       "nameRu": "Иммуноферм",
       "category": "microbiota",
@@ -4189,7 +4189,7 @@
     },
     {
       "id": "ph-balance",
-      "image": "img/PH Balance.png",
+      "image": "/img/PH Balance.png",
       "nameEn": "PH Balance",
       "nameRu": "pH Баланс",
       "category": "fermented",
@@ -5212,7 +5212,7 @@
     },
     {
       "id": "purify-tonic",
-      "image": "img/Напитки/Тоник Очищения.png",
+      "image": "/img/Напитки/Тоник Очищения.png",
       "nameEn": "Purify Tonic",
       "nameRu": "Тоник Очищения",
       "category": "detox",
@@ -5331,7 +5331,7 @@
     },
     {
       "id": "alkaline-water",
-      "image": "img/Напитки/Щелочная Минеральная Вода.png",
+      "image": "/img/Напитки/Щелочная Минеральная Вода.png",
       "nameEn": "Alkaline Water",
       "nameRu": "Щелочная Минеральная Вода",
       "category": "detox",
@@ -5439,7 +5439,7 @@
     },
     {
       "id": "liver-flow",
-      "image": "img/Напитки/Поток Печени.png",
+      "image": "/img/Напитки/Поток Печени.png",
       "nameEn": "Liver Flow",
       "nameRu": "Поток Печени",
       "category": "detox",
@@ -5559,7 +5559,7 @@
     },
     {
       "id": "cold-brew-coffee",
-      "image": "img/Напитки/Колд Брю кофе.png",
+      "image": "/img/Напитки/Колд Брю кофе.png",
       "nameEn": "Cold Brew Coffee",
       "nameRu": "Колд Брю Кофе",
       "category": "tea-coffee",
@@ -5579,7 +5579,7 @@
     },
     {
       "id": "bumble-coffee",
-      "image": "img/Напитки/Колд Брю Бамбл.png",
+      "image": "/img/Напитки/Колд Брю Бамбл.png",
       "nameEn": "Cold Brew Bumble",
       "nameRu": "Колд Брю Бамбл",
       "category": "tea-coffee",
@@ -5605,7 +5605,7 @@
     },
     {
       "id": "herbal-tonic-coffee",
-      "image": "img/Напитки/Колд Брю Хербл Тоник.png",
+      "image": "/img/Напитки/Колд Брю Хербл Тоник.png",
       "nameEn": "Cold Brew Herbal Tonic",
       "nameRu": "Колд Брю Хербл Тоник",
       "category": "tea-coffee",
@@ -5631,7 +5631,7 @@
     },
     {
       "id": "milk-coffee",
-      "image": "img/Напитки/Колд Брю Латте.png",
+      "image": "/img/Напитки/Колд Брю Латте.png",
       "nameEn": "Cold Brew Latte",
       "nameRu": "Колд Брю Латте",
       "category": "tea-coffee",
@@ -5654,7 +5654,7 @@
     },
     {
       "id": "bumble-matcha",
-      "image": "img/Напитки/Бамбл Матча.png",
+      "image": "/img/Напитки/Бамбл Матча.png",
       "nameEn": "Bumble Matcha",
       "nameRu": "Бамбл Матча",
       "category": "tea-coffee",
@@ -5680,7 +5680,7 @@
     },
     {
       "id": "herbal-tonic-matcha",
-      "image": "img/Напитки/Матча Хербл Тоник.png",
+      "image": "/img/Напитки/Матча Хербл Тоник.png",
       "nameEn": "Herbal Tonic Matcha",
       "nameRu": "Матча Хербл Тоник",
       "category": "tea-coffee",
@@ -5706,7 +5706,7 @@
     },
     {
       "id": "matcha-milk",
-      "image": "img/Напитки/Матча Латте.png",
+      "image": "/img/Напитки/Матча Латте.png",
       "nameEn": "Matcha Latte",
       "nameRu": "Матча Латте",
       "category": "tea-coffee",
@@ -5729,7 +5729,7 @@
     },
     {
       "id": "thai-tea",
-      "image": "img/Напитки/Тайский чай.png",
+      "image": "/img/Напитки/Тайский чай.png",
       "nameEn": "Thai Tea",
       "nameRu": "Тайский чай",
       "category": "tea-coffee",
@@ -5755,7 +5755,7 @@
     },
     {
       "id": "local-tea",
-      "image": "img/Напитки/Локал Чай.png",
+      "image": "/img/Напитки/Локал Чай.png",
       "nameEn": "Local Tea",
       "nameRu": "Локал Чай",
       "category": "tea-coffee",
@@ -5788,7 +5788,7 @@
       "function": "источник клетчатки",
       "activeIngredients": "овсяные хлопья",
       "price": 25,
-      "image": "img/бустеры/Oats.png",
+      "image": "/img/бустеры/Oats.png",
       "bg": "#F5F0E8",
       "color": "#5C4A1E"
     },
@@ -5799,7 +5799,7 @@
       "function": "повышение энергии",
       "activeIngredients": "гуарана, женьшень, гранат",
       "price": 75,
-      "image": "img/бустеры/Energiser.png",
+      "image": "/img/бустеры/Energiser.png",
       "bg": "#F9EAE8",
       "color": "#7A2A1E"
     },
@@ -5810,7 +5810,7 @@
       "function": "поддержка выносливости",
       "activeIngredients": "L-цитруллин",
       "price": 50,
-      "image": "img/бустеры/Sport Endurance.png",
+      "image": "/img/бустеры/Sport Endurance.png",
       "bg": "#F5F0E8",
       "color": "#5C4A1E"
     },
@@ -5821,7 +5821,7 @@
       "function": "антиоксидантная защита",
       "activeIngredients": "матча",
       "price": 25,
-      "image": "img/бустеры/Antioxidant Blend.png",
+      "image": "/img/бустеры/Antioxidant Blend.png",
       "bg": "#EDF5E8",
       "color": "#265B2D"
     },
@@ -5832,7 +5832,7 @@
       "function": "гидратация и электролитный баланс",
       "activeIngredients": "магний, калий, натрий, витамин C, витамины группы B",
       "price": 75,
-      "image": "img/бустеры/Vita Daily.png",
+      "image": "/img/бустеры/Vita Daily.png",
       "bg": "#F5F0E8",
       "color": "#5C4A1E"
     },
@@ -5843,7 +5843,7 @@
       "function": "антиоксидантная защита",
       "activeIngredients": "асаи, годжи, клюква, гранат",
       "price": 75,
-      "image": "img/бустеры/Superfruit.png",
+      "image": "/img/бустеры/Superfruit.png",
       "bg": "#F5E8F0",
       "color": "#6B2550"
     },
@@ -5854,7 +5854,7 @@
       "function": "омега-кислоты и насыщение",
       "activeIngredients": "семена чиа",
       "price": 25,
-      "image": "img/бустеры/Chia.png",
+      "image": "/img/бустеры/Chia.png",
       "bg": "#F5F0E8",
       "color": "#5C4A1E"
     },
@@ -5865,7 +5865,7 @@
       "function": "поддержка иммунитета",
       "activeIngredients": "витамин A, витамин C, цинк, матча",
       "price": 75,
-      "image": "img/бустеры/Immunity Shield.png",
+      "image": "/img/бустеры/Immunity Shield.png",
       "bg": "#EDF5E8",
       "color": "#265B2D"
     },
@@ -5876,7 +5876,7 @@
       "function": "белковая поддержка",
       "activeIngredients": "мультипротеиновый комплекс",
       "price": 50,
-      "image": "img/бустеры/Protein Blend.png",
+      "image": "/img/бустеры/Protein Blend.png",
       "bg": "#F5F0E8",
       "color": "#5C4A1E"
     },
@@ -5887,7 +5887,7 @@
       "function": "поддержка кожи",
       "activeIngredients": "коллаген + витамины",
       "price": 50,
-      "image": "img/бустеры/Collagen Glow.png",
+      "image": "/img/бустеры/Collagen Glow.png",
       "bg": "#F5F0E8",
       "color": "#5C4A1E"
     },
@@ -5898,7 +5898,7 @@
       "function": "поддержка детокс-процессов",
       "activeIngredients": "экстракт зелёных ростков пшеницы, кейл, спирулина",
       "price": 75,
-      "image": "img/бустеры/Green Superfood.png",
+      "image": "/img/бустеры/Green Superfood.png",
       "bg": "#E8F5F0",
       "color": "#1A5C48"
     }
@@ -5922,28 +5922,28 @@
             "name": "Клубника",
             "nameEn": "Strawberry",
             "ingredients": "База-основа, сублимированная клубника",
-            "image": "img/перекусы/Клубника.png"
+            "image": "/img/перекусы/Клубника.png"
           },
           {
             "id": "passionfruit",
             "name": "Маракуйя",
             "nameEn": "Passionfruit",
             "ingredients": "База-основа, сублимированная маракуйя",
-            "image": "img/перекусы/Маракуйя.png"
+            "image": "/img/перекусы/Маракуйя.png"
           },
           {
             "id": "raspberry",
             "name": "Малина",
             "nameEn": "Raspberry",
             "ingredients": "База-основа, сублимированная малина",
-            "image": "img/перекусы/Малина.png"
+            "image": "/img/перекусы/Малина.png"
           },
           {
             "id": "carob-cacao",
             "name": "Кероб, какао",
             "nameEn": "Dark Carob Cacao",
             "ingredients": "База-основа, кэроб, какао",
-            "image": "img/перекусы/Кероб, какао.png"
+            "image": "/img/перекусы/Кероб, какао.png"
           }
         ]
       },
@@ -5958,21 +5958,21 @@
             "name": "Шоколад",
             "nameEn": "Chocolate Cream",
             "ingredients": "База-основа, овсяная мука, льняная мука, какао, кокосовое масло, соль",
-            "image": "img/перекусы/Шоколад.png"
+            "image": "/img/перекусы/Шоколад.png"
           },
           {
             "id": "lemon-cranberry-cookie",
             "name": "Клюква — лимон",
             "nameEn": "Lemon Cranberry",
             "ingredients": "База-основа, гречневая мука, овсяная мука, клюква, лимонная цедра, лимонный сок, кокосовое масло, соль",
-            "image": "img/перекусы/Клюква - лимон.png"
+            "image": "/img/перекусы/Клюква - лимон.png"
           },
           {
             "id": "mango-coconut-cookie",
             "name": "Манго — кокос",
             "nameEn": "Coconut Mango",
             "ingredients": "База-основа, кокосовая мука, амарантовая мука, манго порошок, кусочки манго, кокосовая стружка, кокосовое масло, соль",
-            "image": "img/перекусы/Манго - кокос.png"
+            "image": "/img/перекусы/Манго - кокос.png"
           }
         ]
       },
@@ -5986,21 +5986,21 @@
             "name": "Орехи с изюмом и клюквой",
             "price": 399,
             "ingredients": "грецкий орех, миндаль, фундук, кешью, клюква вяленная, курага, изюм",
-            "image": "img/перекусы/Орехи с изюмом и клюквой.png"
+            "image": "/img/перекусы/Орехи с изюмом и клюквой.png"
           },
           {
             "id": "chips-nuts",
             "name": "Чипсы, орехи и сухофрукты",
             "price": 499,
             "ingredients": "апельсин, яблоко, грецкий орех, миндаль, фундук, кешью, клюква вяленная, курага, изюм",
-            "image": "img/перекусы/Чипсы, орехи и сухофрукты.png"
+            "image": "/img/перекусы/Чипсы, орехи и сухофрукты.png"
           },
           {
             "id": "lukum-almonds",
             "name": "Лукум, миндаль и финики",
             "price": 490,
             "ingredients": "лукум, миндаль, финики",
-            "image": "img/перекусы/Лукум, миндаль и финики.png"
+            "image": "/img/перекусы/Лукум, миндаль и финики.png"
           }
         ]
       },
@@ -6014,19 +6014,19 @@
             "id": "pie-four-cheese",
             "name": "С сыром и шпинатом",
             "ingredients": "Адыгейский сыр, голландский сыр, шпинат, кориандр свежий (кинза)",
-            "image": "img/перекусы/С сыром и шпинатом.png"
+            "image": "/img/перекусы/С сыром и шпинатом.png"
           },
           {
             "id": "pie-baked-veggies",
             "name": "С печеными овощами и сыром",
             "ingredients": "Баклажан, адыгейский сыр, голландский сыр, томаты, болгарский перец, петрушка",
-            "image": "img/перекусы/С печеными овощами и сыром.png"
+            "image": "/img/перекусы/С печеными овощами и сыром.png"
           },
           {
             "id": "pie-apple-cinnamon",
             "name": "С яблоком и корицей",
             "ingredients": "Яблоко, сахар, корица",
-            "image": "img/перекусы/С яблоком и корицей.png"
+            "image": "/img/перекусы/С яблоком и корицей.png"
           }
         ]
       },
@@ -6041,7 +6041,7 @@
             "name": "Тарталетка «Орехи в соленой карамели»",
             "price": 350,
             "ingredients": "Грецкие орехи, миндаль, фундук, арахис, финики, карамель на кокосовых сливках",
-            "image": "img/перекусы/Тарталетка _Орехи в соленой карамели_.png"
+            "image": "/img/перекусы/Тарталетка _Орехи в соленой карамели_.png"
           }
         ]
       },
@@ -6055,19 +6055,19 @@
             "id": "walnut-coffee-caramel",
             "name": "Грецкий орех в кофейно-карамельной глазури",
             "ingredients": "Грецкий орех, белый шоколад, карамель, кофейное зерно",
-            "image": "img/перекусы/Грецкий орех в кофейно-карамельной глазури.png"
+            "image": "/img/перекусы/Грецкий орех в кофейно-карамельной глазури.png"
           },
           {
             "id": "almond-gingerbread",
             "name": "Миндаль в пряничной глазури",
             "ingredients": "Жаренный миндаль, белый и молочный шоколад, специи: соль, корица, кориандр, мускатный орех, кардамон, гвоздика, бадьян и душистый перец.",
-            "image": "img/перекусы/Миндаль в пряничной глазури.png"
+            "image": "/img/перекусы/Миндаль в пряничной глазури.png"
           },
           {
             "id": "passionfruit-yogurt",
             "name": "Маракуйя в йогуртовой глазури",
             "ingredients": "Сублимированная маракуйя, йогуртовая глазурь",
-            "image": "img/перекусы/Маракуйя в йогуртовой глазури.png"
+            "image": "/img/перекусы/Маракуйя в йогуртовой глазури.png"
           }
         ]
       },
@@ -6076,7 +6076,7 @@
         "name": "Запечённый батат с пармезаном",
         "nameEn": "Sweet Potato Fries",
         "price": 490,
-        "image": "img/перекусы/Запечённый батат с пармезаном.png",
+        "image": "/img/перекусы/Запечённый батат с пармезаном.png",
         "items": [
           {
             "id": "batat-fries",

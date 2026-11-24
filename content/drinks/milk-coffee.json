@@ -1,6 +1,6 @@
 {
   "id": "milk-coffee",
-  "image": "img/Напитки/Колд Брю Латте.png",
+  "image": "/img/Напитки/Колд Брю Латте.png",
   "nameEn": "Cold Brew Latte",
   "nameRu": "Колд Брю Латте",
   "category": "tea-coffee",
