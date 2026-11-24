@@ -4,7 +4,7 @@
   "nameRu": "Кавказский долгожитель",
   "nameEn": "Caucasian Longevity",
   "category": "elixirs",
-  "hidden": true,
+  "hidden": false,
   "price": 790,
   "image": "/img/Напитки/Кавказский долгожитель.png",
   "functionRu": "Кардиоваскулярная защита, антиоксидантная поддержка и укрепление жизненного тонуса",
