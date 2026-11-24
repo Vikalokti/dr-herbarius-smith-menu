@@ -190,7 +190,7 @@ collections:
               - { label: Часть растения, name: part, widget: string, required: false }
               - { label: Активные компоненты, name: source, widget: string, required: false }
               - { label: Действие, name: effect, widget: text, required: false }
-              - { label: Группа, name: group, widget: string, required: false }
+              - { label: Группа (служебное поле), name: group, widget: hidden, required: false }
           - label: Готовые купажи
             name: MONO_BLENDS
             widget: list
