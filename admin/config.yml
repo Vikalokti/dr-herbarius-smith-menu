@@ -28,17 +28,13 @@ collections:
               - { label: ID, name: id, widget: uuid }
               - { label: Название на русском, name: nameRu, widget: string }
               - { label: Название на английском, name: nameEn, widget: string, required: false }
-              - { label: Подзаголовок, name: subtitle, widget: string, required: false }
               - { label: Описание на русском, name: description, widget: text }
               - { label: Описание на английском, name: descriptionEn, widget: text, required: false }
               - { label: Основной цвет, name: color, widget: color, default: "#265B2D" }
               - { label: Светлый цвет фона, name: colorLight, widget: color, default: "#EFF6EE" }
-              - { label: Дополнительный цвет, name: colorMid, widget: color, default: "#7B9B76" }
-              - label: Иконка
-                name: icon
-                widget: select
-                default: leaf
-                options: [leaf, brain, bolt, star, droplet, flower, wind, plus]
+              - { label: Подзаголовок (служебное поле), name: subtitle, widget: hidden, default: "" }
+              - { label: Дополнительный цвет (служебное поле), name: colorMid, widget: hidden, default: "#7B9B76" }
+              - { label: Иконка (служебное поле), name: icon, widget: hidden, default: leaf }
               - { label: Скрыть категорию, name: hidden, widget: boolean, required: false }
 
   - name: drinks
